@@ -1,0 +1,96 @@
+@import './partials/reset.scss';
+
+body {
+    box-sizing: border-box;
+}
+
+// section 1
+#section1 {
+    height:100vh;
+    width:100vw;
+    background: url('../images/header_start_img.jpg');
+    
+}
+.nav{
+    display:flex;
+    justify-content: flex-end;
+}
+.nav_buttons {
+    padding: 10px;
+    height:20px;
+}
+.start_button {
+    @extend .nav_buttons;
+    border: 1px solid black;
+}
+
+.log_buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+.napis {
+    display: flex;   
+    font-size: 2em;
+    justify-content: flex-end;
+}
+
+.znaczek_container {
+    display: flex;
+    justify-content: flex-end;
+}
+.znaczek{
+    background: url("../images/decoration.png");
+    height:20px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.opcje_container {
+    display: flex;
+    justify-content: flex-end;
+}
+.opcja {
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+
+
+
+
+// section2
+
+#section2 {
+    height: 200px;
+    width: 100vw;
+    background-color: rgb(251,206,0);
+}
+
+#section3 {
+    height: 400px;
+    width: 100vw;
+    background-color: rgb(236, 228, 228);
+}
+
+#section4 {
+    height: 500px;
+    width: 100vw;
+    background-color: rgb(129, 120, 120);
+}
+
+#section5 {
+    height: 600px;
+    width: 100vw;
+    background-color: rgb(236, 228, 228);
+}
+
+#section6 {
+    height: 900px;
+    width: 100vw;
+    background: url('../images/footer_bg_img.jpg');
+    background-position: center;
+    background-size: cover;
+}
