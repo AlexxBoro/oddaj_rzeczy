@@ -16,7 +16,7 @@ const Section1 = props => {
 
                 <div className="log_buttons">
                     <div className="nav_buttons">Zaloguj</div>
-                    <div className="nav_buttons">Załóż konto</div>
+                    <div className="nav_buttons zaloz_konto">Załóż konto</div>
                 </div>
 
                 <div className="nav">
@@ -39,13 +39,5 @@ const Section1 = props => {
     )
 }
 
-
-// class Section1 extends React.Component {
-//     render(){
-//         return(
-//             <div id="section1">{this.napisy}</div>
-//         )
-//     }
-// }
 
 export default Section1;

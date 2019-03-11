@@ -1,0 +1,53 @@
+#section2 {
+    height: 300px;
+    width: 100vw;
+    background-color: rgb(251,206,0);
+    color: rgb(82, 80, 80);
+    font-weight: 300;
+    display: flex;
+}
+
+.stat{
+    margin-left:6em;
+    margin-right:6em;
+    margin-top:1em;
+    margin-bottom:2em;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats_numbers{
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.stats_text{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.stats_descr{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    line-height:1.3em;
+}
+
+
+
+
+
