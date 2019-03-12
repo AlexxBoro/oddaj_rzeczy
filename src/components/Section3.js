@@ -29,7 +29,7 @@ class Section3 extends React.Component {
                             <div className="opcja_tytul">
                                 {opcje[0]}
                             </div>
-                            <hr></hr>
+                            <hr className="hr_sekcja3"></hr>
                             <div>
                                 {opcje_desr[0]}
                             </div>
@@ -42,7 +42,7 @@ class Section3 extends React.Component {
                             <div className="opcja_tytul">
                                 {opcje[1]}
                             </div>
-                            <hr></hr>
+                            <hr className="hr_sekcja3"></hr>
                             <div>
                                 {opcje_desr[1]}
                             </div>
@@ -55,7 +55,7 @@ class Section3 extends React.Component {
                             <div className="opcja_tytul">
                                 {opcje[2]}
                             </div>
-                            <hr></hr>
+                            <hr className="hr_sekcja3"></hr>
                             <div>
                                 {opcje_desr[2]}
                             </div>
@@ -68,7 +68,7 @@ class Section3 extends React.Component {
                             <div className="opcja_tytul">
                                 {opcje[3]}
                             </div>
-                            <hr></hr>
+                            <hr className="hr_sekcja3"></hr>
                             <div>
                                 {opcje_desr[3]}
                             </div>
