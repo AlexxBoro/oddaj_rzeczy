@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class Section3 extends React.Component {
     render(){
@@ -74,8 +75,10 @@ class Section3 extends React.Component {
                         </div>
                     </div>
 
+                    <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/login">
                     <div className="zaloz_konto_sekcja3">załóż konto</div>
-
+                    </Link>
+                    
                 </div>
             </div>
             

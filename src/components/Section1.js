@@ -1,5 +1,6 @@
 import React from 'react';
 import '../scss/main.scss';
+import {Link} from 'react-router-dom';
 
 
 class Section1 extends React.Component {
@@ -34,8 +35,8 @@ class Section1 extends React.Component {
                 <div id="section1">
     
                     <div className="log_buttons">
-                        <div className="nav_buttons">Zaloguj</div>
-                        <div className="nav_buttons zaloz_konto">Załóż konto</div>
+                        <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/login"><div className="nav_buttons">Zaloguj</div></Link>
+                        <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/login"><div className="nav_buttons zaloz_konto">Załóż konto</div></Link>
                     </div>
     
                     <div className="nav">
@@ -51,7 +52,12 @@ class Section1 extends React.Component {
                     </div>
                     
     
-                    <div className="opcje_container">{options}</div>
+                    <div className="opcje_container">
+                        <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/form">{options[0]}</Link>
+                        <div>
+                            {options[1]}
+                        </div>
+                    </div>
                 </div>
             </>
         )

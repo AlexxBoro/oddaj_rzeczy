@@ -1,0 +1,51 @@
+#section5 {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255,255,255);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(82, 80, 80);
+}
+
+.section5_container{
+    width: 80vw;
+    height: 100vh;
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_section5{
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    line-height:1.3em;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+
+.znaczek_section5{
+    background: url("../images/decoration.png");
+    height:20px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;     
+}
+
+.opcje_section5{
+    display: flex;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text_section5{
+    width:30%;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    text-align: center;
+}

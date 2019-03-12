@@ -1,8 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Main from './components/Main';
+import Login from './components/Login';
+import Form from './components/Form';
 
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+  } from 'react-router-dom';
 
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render(){
+        return (
+            <HashRouter>
+                    <div>
+                    <Route exact path='/' component={Main} />
+                    <Route path='/login' component={Login} />
+                    <Route path='/form' component={Form} />
+                    </div>
+            </HashRouter>                  
+        )
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function() {
 
