@@ -23,7 +23,7 @@ class Section3 extends React.Component {
 
                         <div className="opcja_sekcja3">
                             <div>
-                                <i class="far fa-lightbulb fa-2x"></i>
+                                <i className="far fa-lightbulb fa-2x"></i>
                             </div>
                             <div className="opcja_tytul">
                                 {opcje[0]}
@@ -36,7 +36,7 @@ class Section3 extends React.Component {
 
                         <div className="opcja_sekcja3">
                             <div>
-                                <i class="fas fa-box-open fa-2x"></i>
+                                <i className="fas fa-box-open fa-2x"></i>
                             </div>
                             <div className="opcja_tytul">
                                 {opcje[1]}
@@ -49,7 +49,7 @@ class Section3 extends React.Component {
 
                         <div className="opcja_sekcja3">
                             <div>
-                                <i class="fas fa-binoculars fa-2x"></i>
+                                <i className="fas fa-binoculars fa-2x"></i>
                             </div>
                             <div className="opcja_tytul">
                                 {opcje[2]}
@@ -62,7 +62,7 @@ class Section3 extends React.Component {
 
                         <div className="opcja_sekcja3">
                             <div>
-                                <i class="fas fa-exchange-alt fa-2x"></i>
+                                <i className="fas fa-exchange-alt fa-2x"></i>
                             </div>
                             <div className="opcja_tytul">
                                 {opcje[3]}

@@ -20,7 +20,7 @@ class Section4 extends React.Component {
                 </div>
 
 
-                <div class="image_container"></div>
+                <div className="image_container"></div>
 
             </div>
             

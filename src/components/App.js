@@ -6,6 +6,15 @@ import Section4 from './Section4';
 import Section5 from './Section5';
 import Section6 from './Section6';
 
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+  } from 'react-router-dom';
+  
+
 class App extends React.Component{
     state = {
         nav: ["Start","O co chodzi?", "O nas", "Fundacje i organizacje", "Kontakt"],
