@@ -5,18 +5,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(82, 80, 80);
 }
 
 .section4_container{
     display: flex;
     height:90vh;
-    border: 1px solid black;
-}
-
-.text_container{
-    border: 1px solid red;
 }
 
 .image_container{
-    border: 1px solid red;
+    background: url('../images/about.jpg');
+    background-size:cover;
+    width:50vw;
+}
+
+
+.znaczek_container_section4 {
+    display: flex;
+    margin-bottom:1.5em;
+}
+.znaczek_section4{
+    background: url("../images/decoration.png");
+    height:20px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+//text container:
+
+.section4_tytul{
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    line-height:1.3em;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+
+.text_container{
+    width:50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4_text{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.section4_text p{
+    width:60%;
+    font-size: 1.3em;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
 }
