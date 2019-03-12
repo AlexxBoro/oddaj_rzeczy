@@ -1,0 +1,22 @@
+#section4 {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(239, 239, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4_container{
+    display: flex;
+    height:90vh;
+    border: 1px solid black;
+}
+
+.text_container{
+    border: 1px solid red;
+}
+
+.image_container{
+    border: 1px solid red;
+}

@@ -20,7 +20,7 @@ const Section1 = props => {
                 </div>
 
                 <div className="nav">
-                    <div className="start_button">Start</div>
+                    {/* <div className="start_button">Start</div> */}
                     {nav}
                 </div>
                 

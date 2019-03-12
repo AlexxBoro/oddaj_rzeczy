@@ -11,12 +11,21 @@
     display:flex;
     justify-content: flex-end;
     margin-right: 10em;
+   
+}
+.nav_buttons:hover{
+    border-top: 1px solid rgb(66, 66, 66);
+    border-left: 1px solid rgb(66, 66, 66);
+    border-right: 1px solid rgb(167, 167, 167);
+    border-bottom: 1px solid rgb(167, 167, 167);
+    
 }
 
 .nav_buttons {
     margin-top: 10px;
     padding: 10px;
     height:20px;
+    
 }
 
 .start_button {

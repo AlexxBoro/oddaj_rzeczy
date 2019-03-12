@@ -1,6 +1,8 @@
 @import './partials/reset.scss';
 @import './partials/section1';
 @import './partials/section2';
+@import './partials/section3';
+@import './partials/section4';
 
 body {
     box-sizing: border-box;
@@ -8,17 +10,7 @@ body {
 
 
 
-#section3 {
-    height: 400px;
-    width: 100vw;
-    background-color: rgb(236, 228, 228);
-}
 
-#section4 {
-    height: 500px;
-    width: 100vw;
-    background-color: rgb(129, 120, 120);
-}
 
 #section5 {
     height: 600px;
