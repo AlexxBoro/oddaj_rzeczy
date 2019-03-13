@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/Main';
 import Login from './components/Login';
-import Form from './components/Form';
+import Form from './components/Form.General';
 
 import {
     HashRouter,
