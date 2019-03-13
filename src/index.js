@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Main from './components/Main';
 import Login from './components/Login';
 import Form from './components/Form.General';
+import Rej from './components/Rejestracja';
 
 import {
     HashRouter,
@@ -21,6 +22,7 @@ class App extends React.Component {
             <HashRouter>
                     <div>
                     <Route exact path='/' component={Main} />
+                    <Route path='/rej' component={Rej} />
                     <Route path='/login' component={Login} />
                     <Route path='/form' component={Form} />
                     </div>

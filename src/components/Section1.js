@@ -36,7 +36,7 @@ class Section1 extends React.Component {
     
                     <div className="log_buttons">
                         <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/login"><div className="nav_buttons">Zaloguj</div></Link>
-                        <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/login"><div className="nav_buttons zaloz_konto">Załóż konto</div></Link>
+                        <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/rej"><div className="nav_buttons zaloz_konto">Załóż konto</div></Link>
                     </div>
     
                     <div className="nav">

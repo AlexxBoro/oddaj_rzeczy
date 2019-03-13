@@ -34,15 +34,15 @@
     
 }
 
-.start_button {
-    @extend .nav_buttons;
-    border-top: 1px solid rgb(66, 66, 66);
-    border-left: 1px solid rgb(66, 66, 66);
-    border-right: 1px solid rgb(167, 167, 167);
-    border-bottom: 1px solid rgb(167, 167, 167);
-    padding-right: 1.5em;
-    padding-left: 1.5em;
-}
+// .start_button {
+//     @extend .nav_buttons;
+//     border-top: 1px solid rgb(66, 66, 66);
+//     border-left: 1px solid rgb(66, 66, 66);
+//     border-right: 1px solid rgb(167, 167, 167);
+//     border-bottom: 1px solid rgb(167, 167, 167);
+//     padding-right: 1.5em;
+//     padding-left: 1.5em;
+// }
 
 .log_buttons {
     display: flex;
