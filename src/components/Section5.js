@@ -34,9 +34,7 @@ class Section5 extends React.Component {
 
                 <div className="title_section5">Komu pomagamy?</div>
 
-                <div className="znaczek_section5">
-                    <div className="znaczek_section5"></div>
-                </div>
+                <div className="znaczek_section5"></div>
 
                 <div className="opcje_section5">
                     {organizacje}  

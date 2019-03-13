@@ -62,6 +62,7 @@ class Section2 extends React.Component {
                     <div className="stats_descr">
                         {stats_descr[2]}
                     </div>    
+                    
                 </div>
                  
             </div>

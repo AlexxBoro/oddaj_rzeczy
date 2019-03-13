@@ -7,8 +7,6 @@ import Section5 from './Section5';
 import Section6 from './Section6';
 
 
-  
-
 class Main extends React.Component{
     state = {
         nav: ["O co chodzi?", "O nas", "Fundacje i organizacje", "Kontakt"],
