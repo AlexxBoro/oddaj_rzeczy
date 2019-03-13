@@ -20,19 +20,19 @@ self.__precacheManifest = [
     "url": "/oddaj_rzeczy/static/js/runtime~main.371b45f9.js"
   },
   {
-    "revision": "6832d40abd8182bfb777",
-    "url": "/oddaj_rzeczy/static/js/main.221b324a.chunk.js"
+    "revision": "64ec86b7396e67284ed0",
+    "url": "/oddaj_rzeczy/static/js/main.53eb048d.chunk.js"
   },
   {
-    "revision": "7f04c1311448c30ef17f",
-    "url": "/oddaj_rzeczy/static/js/2.fe037a24.chunk.js"
+    "revision": "dfd6328701cd8f18517d",
+    "url": "/oddaj_rzeczy/static/js/2.1dc3aece.chunk.js"
   },
   {
-    "revision": "6832d40abd8182bfb777",
-    "url": "/oddaj_rzeczy/static/css/main.e1fbd992.chunk.css"
+    "revision": "64ec86b7396e67284ed0",
+    "url": "/oddaj_rzeczy/static/css/main.83112c9b.chunk.css"
   },
   {
-    "revision": "9277a47fb6e6075baee33ac40a805ecc",
+    "revision": "099a84ad43d40da29192ee82a7ef8235",
     "url": "/oddaj_rzeczy/index.html"
   }
 ];
