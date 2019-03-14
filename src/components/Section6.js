@@ -43,14 +43,14 @@ class Section6 extends React.Component {
                         <p className="formularz_title">formularz kontaktowy</p>
 
                         <form>
-                            <div class="name_and_email">
+                            <div className="name_and_email">
                                 <input className="input_name" type="text" placeholder="Imię" value={this.state.name} onChange={this.onNameChange}></input>
                                 <input className="input_email" type="email" placeholder="Email" value={this.state.email} onChange={this.onEmailChange}></input><br></br>
                             </div>
-                            <div class="message">
+                            <div className="message">
                                 <input className="input_message" type="text" placeholder="Wiadomość" value={this.state.message} onChange={this.onMessageChange}></input><br></br>
                             </div>
-                            <div class="button">
+                            <div className="button">
                                 <button onSubmit={this.onFormSubmit}>Wyslij</button>
                             </div>
                         </form>
@@ -62,9 +62,9 @@ class Section6 extends React.Component {
                 <div className="container2">
                     <div className="podpis">Lorem ipsum lorem ipsum lorem lorem.</div>
                     <div className="logos">
-                        <i class="fab fa-facebook fa-2x"></i>
-                        <i class="fab fa-twitter-square fa-2x"></i>
-                        <i class="fab fa-linkedin fa-2x"></i>
+                        <i className="fab fa-facebook fa-2x"></i>
+                        <i className="fab fa-twitter-square fa-2x"></i>
+                        <i className="fab fa-linkedin fa-2x"></i>
                     </div>
                 </div>
 

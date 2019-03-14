@@ -24,7 +24,7 @@ class Form_Header extends React.Component{
 
                 <div onClick={this.showHiddenMenu} className="header_user_nav">
                     <div onClick={this.showHiddenMenu} className="header_user">Witaj  NAME</div>
-                    <i onClick={this.showHiddenMenu} class="header_user_icon fas fa-cogs"></i>
+                    <i onClick={this.showHiddenMenu} className="header_user_icon fas fa-cogs"></i>
                 </div>
 
                 <div className="nav_header">
