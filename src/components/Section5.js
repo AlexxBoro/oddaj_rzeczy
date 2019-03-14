@@ -1,35 +1,53 @@
 import React from 'react';
+import classnames from 'classnames';
 
 class Section5 extends React.Component {
-    
-    handleClick = (e) => {
+    constructor(props) {
+        super(props);
 
-        if (e.target.innerText === "Fundacjom") {
-            document.querySelector('#fundacje').classList.remove('hidden');
-            document.querySelector('#pozarzadowe').classList.add('hidden');
-            document.querySelector('#lokalne').classList.add('hidden');
-        }  
-        else if (e.target.innerText === "Organizacjom pozarządowym") {
-            document.querySelector('#fundacje').classList.add('hidden');
-            document.querySelector('#pozarzadowe').classList.remove('hidden');
-            document.querySelector('#lokalne').classList.add('hidden');
-        }  
-        else if (e.target.innerText === "Lokalnym zbiórkom") {
-            document.querySelector('#fundacje').classList.add('hidden');
-            document.querySelector('#pozarzadowe').classList.add('hidden');
-            document.querySelector('#lokalne').classList.remove('hidden');
-        }   
+        this.state = {
+            activeItem: 0,
+        }
     }
-    
-    render() {
 
-        const organizacje = this.props.section5_org.map((e,i) => {
-            return <div onClick={this.handleClick} className="opcja_section5" key={i}>{e}</div>
+    handleClick = (index) => {
+        this.setState({
+            activeItem: index,
+        });
+
+        // if (e.target.innerText === "Fundacjom") {
+        //     document.querySelector('#fundacje').classList.remove('hidden');
+        //     document.querySelector('#pozarzadowe').classList.add('hidden');
+        //     document.querySelector('#lokalne').classList.add('hidden');
+        // }
+        // else if (e.target.innerText === "Organizacjom pozarządowym") {
+        //     document.querySelector('#fundacje').classList.add('hidden');
+        //     document.querySelector('#pozarzadowe').classList.remove('hidden');
+        //     document.querySelector('#lokalne').classList.add('hidden');
+        // }
+        // else if (e.target.innerText === "Lokalnym zbiórkom") {
+        //     document.querySelector('#fundacje').classList.add('hidden');
+        //     document.querySelector('#pozarzadowe').classList.add('hidden');
+        //     document.querySelector('#lokalne').classList.remove('hidden');
+        // }
+    }
+
+    render() {
+        const organizacje = this.props.section5_org.map((e, i) => {
+            let classList = {
+                opcja_section5: true,
+                hidden: i !== this.state.activeItem,
+            };
+
+            // klasycznie zapisalibyśmy to tak:
+            classList = `opcja_section5` + i !== this.state.activeItem ? ' hidden' : '';
+
+            return <div onClick={() => this.handleClick(i)} className={classnames(classList)} key={i}>{e}</div>
         });
 
         return(
             <div id="section5">
-            
+
             <div className="section5_container">
 
                 <div className="title_section5">Komu pomagamy?</div>
@@ -37,7 +55,7 @@ class Section5 extends React.Component {
                 <div className="znaczek_section5"></div>
 
                 <div className="opcje_section5">
-                    {organizacje}  
+                    {organizacje}
                 </div>
 
                 <div className="text_section5">
@@ -45,8 +63,7 @@ class Section5 extends React.Component {
                 </div>
 
 
-                <div className="organizacje"> 
-                
+                <div className="organizacje">
                     <div id="fundacje">
                         <div className="informacje">
                             <div className="informacje1">
@@ -92,6 +109,7 @@ class Section5 extends React.Component {
 
                     <div id="pozarzadowe" className='hidden'>
                         <div className="informacje">
+                            {/* MAp :) */}
                             <div className="informacje1">
                                 <div className="informacje1_kontenerek">
                                     <p className="nazwa_org">Organizacja 1</p>
@@ -109,6 +127,7 @@ class Section5 extends React.Component {
                                     <hr align="left"></hr>
                                 </div>
                             </div>
+                            {/* Map */}
                             <div className="informacje2">
                                 <div className="informacje2_kontenerek">
                                     <p className="informacje2_artykuly">lorem, lorem, lorem</p>
@@ -172,11 +191,11 @@ class Section5 extends React.Component {
                             <p className="numerek numerek_wybr">3</p>
                         </div>
                     </div>
-                
+
                 </div>
 
             </div>
-            
+
             </div>
         )
     }

@@ -9,27 +9,29 @@ class Section6 extends React.Component {
     }
 
     onNameChange = event => {
-        this.setState({ 
+        this.setState({
             name: event.target.value,
         });
     };
 
     onEmailChange = event => {
-        this.setState({ 
+        this.setState({
             email: event.target.value,
         });
     };
 
     onMessageChange = event => {
-        this.setState({ 
+        this.setState({
             message: event.target.value,
         });
     };
 
     onFormSubmit = event => {
         event.preventDefault();
-        
+
     };
+
+    // onChange -> twój handler -> setState -> stan się zmienił -> render (zawsze wołany na zmianie stanu / propsów)
 
     render() {
         return(

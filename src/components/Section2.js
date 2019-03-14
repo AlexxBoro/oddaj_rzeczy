@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Nie bój się używania lokalnych zmiennych :)
+const statsNumbers = [];
+
 class Section2 extends React.Component {
 
     render(){
@@ -28,43 +31,44 @@ class Section2 extends React.Component {
         return(
             <div id="section2">
 
+                {/* Lista elementów + map + komponent */}
                 <div className="stat">
                     <div className="stats_numbers">
                         {stats_numbers[0]}
-                    </div>  
+                    </div>
                     <div className="stats_text">
                         {stats_text[0]}
-                    </div>  
+                    </div>
                     <div className="stats_descr">
                         {stats_descr[0]}
-                    </div>    
+                    </div>
                 </div>
 
                 <div className="stat">
                     <div className="stats_numbers">
                         {stats_numbers[1]}
-                    </div>  
+                    </div>
                     <div className="stats_text">
                         {stats_text[1]}
-                    </div>  
+                    </div>
                     <div className="stats_descr">
                         {stats_descr[1]}
-                    </div>    
+                    </div>
                 </div>
 
                 <div className="stat">
                     <div className="stats_numbers">
                         {stats_numbers[2]}
-                    </div>  
+                    </div>
                     <div className="stats_text">
                         {stats_text[2]}
-                    </div>  
+                    </div>
                     <div className="stats_descr">
                         {stats_descr[2]}
-                    </div>    
-                    
+                    </div>
+
                 </div>
-                 
+
             </div>
         )
     }

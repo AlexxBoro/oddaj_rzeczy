@@ -1,0 +1,22 @@
+.Form {
+    background-color: rgb(243,238,235);
+    width:100vw;
+    height:80vh;
+}
+
+// .Form__element
+// .Form__element--modifier
+// .Form--modifier
+
+// div className="Form__element Form__element--modifier"
+
+// "Button Button--uppercased"
+
+.Button {
+    border: 1px;
+
+    &--uppercased {
+        text-transform: uppercase;
+    }
+}
+

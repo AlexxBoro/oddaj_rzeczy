@@ -8,6 +8,9 @@ import Section6 from './Section6';
 
 
 class Main extends React.Component{
+    // Nie bój się trzymania tekstu w komponentach :)
+    // W state powinny znaleźć się TYLKO rzeczy, które zmieniają się w trakcie działania apki
+
     state = {
         nav: ["O co chodzi?", "O nas", "Fundacje i organizacje", "Kontakt"],
         options: ["oddaj rzeczy", "zorganizuj zbiórkę"],

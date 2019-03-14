@@ -1,22 +1,29 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-class Form_Header extends React.Component{
+const headerItems = ["O co chodzi?", "O nas", "Fundacje i organizacje", "Kontakt"];
+
+class FormHeader extends React.Component{
 
     state = {
-        header_nav: ["O co chodzi?", "O nas", "Fundacje i organizacje", "Kontakt"]
-    }
+        hiddenMenuPresent: false,
+    };
 
     showHiddenMenu = () => {
-        document.querySelector('.header_pop_menu').classList.add('show_menu');
-    }
+        this.setState({
+            hiddenMenuPresent: !this.state.hiddenMenuPresent,
+        });
+
+        // document.querySelector('.header_pop_menu').classList.add('show_menu');
+    };
 
 
-    render(){
-
-        const header_nav = this.state.header_nav.map((e,i) => {
+    render() {
+        const headerNav = headerItems.map((e,i) => {
             return <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/" className="nav_buttons_header" key={i}>{e}</Link>
         });
+
+        const popMenuClass = `.header_pop_menu` + this.state.hiddenMenuPresent ? ' show menu' : '';
 
 
         return(
@@ -28,12 +35,12 @@ class Form_Header extends React.Component{
                 </div>
 
                 <div className="nav_header">
-                    {header_nav}
+                    {headerNav}
                 </div>
 
 
                 <div className="header_napis">Oddaj rzeczy, których już nie chcesz<br></br>
-                    POTRZEBUJĄCYM <br></br>
+                    <span className="jakas-klasa-robiaca-uppercase">POTRZEBUJĄCYM</span>
                 </div>
                 <div className="znaczek_header_container">
                         <div className="znaczek_header"></div>
@@ -43,7 +50,7 @@ class Form_Header extends React.Component{
 
 
                 <div className="header_kwadraty">
-
+                    {/* Przepisz na mapowanie 4 komponentów :) */}
                     <div className="header_box">
                         <div className="box_inside">
                             <p className="box_numer">1</p>
@@ -70,17 +77,15 @@ class Form_Header extends React.Component{
                     </div>
                 </div>
 
-
-                <div className="header_pop_menu">
+                <div className={popMenuClass}>
                     <li>Profil</li>
                     <li>Ustawienia</li>
                     <li>Moje zbiórki</li>
                     <li>Wyloguj</li>
                 </div>
-
             </div>
         )
     }
 }
 
-export default Form_Header;
+export default FormHeader;

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/Main';
 import Login from './components/Login';
-import Form_General from './components/Form_General';
+import FormGeneral from './components/FormGeneral/FormGeneral';
 import Rej from './components/Rejestracja';
 
 import {
@@ -24,9 +24,9 @@ class App extends React.Component {
                     <Route exact path='/' component={Main} />
                     <Route path='/rej' component={Rej} />
                     <Route path='/login' component={Login} />
-                    <Route path='/form' component={Form_General} />
+                    <Route path='/form' component={FormGeneral} />
                     </div>
-            </HashRouter>                  
+            </HashRouter>
         )
     }
 }
@@ -34,8 +34,8 @@ class App extends React.Component {
 document.addEventListener('DOMContentLoaded', function() {
 
     ReactDOM.render(
-        <App />, 
+        <App />,
         document.querySelector('#root')
     )
 
-});  
+});

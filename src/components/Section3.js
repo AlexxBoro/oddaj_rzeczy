@@ -1,16 +1,29 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+const sections = [{
+    iconName: '',
+    title: '',
+    description: '',
+}];
 
 class Section3 extends React.Component {
-    render(){
-        const opcje = this.props.section3_options.map((e,i) => {
+    render() {
+        const opcje = this.props.section3_options.map((e, i) => {
             return <p key={i}>{e}</p>;
         });
-        const opcje_desr = this.props.section3_descr.map((e,i) => {
+        const opcje_desr = this.props.section3_descr.map((e, i) => {
             return <p key={i}>{e}</p>
         });
 
-        return(
+        const sectionsDOM = sections.map(section => (<>
+            <div>
+                { section.title }
+            </div>
+            <i className={'far fa-2x ' + section.iconName}/>
+        </>));
+
+        return (
             <div id="section3">
                 <div className="section3_container">
 
@@ -22,6 +35,7 @@ class Section3 extends React.Component {
 
                     <div className="tab_sekcja3">
 
+                        {/* To powinno być przemapowane :) */}
                         <div className="opcja_sekcja3">
                             <div>
                                 <i className="far fa-lightbulb fa-2x"></i>
@@ -76,12 +90,12 @@ class Section3 extends React.Component {
                     </div>
 
                     <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/rej">
-                    <div className="zaloz_konto_sekcja3">załóż konto</div>
+                        <div className="zaloz_konto_sekcja3">załóż konto</div>
                     </Link>
-                    
+
                 </div>
             </div>
-            
+
         )
     }
 }
