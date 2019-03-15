@@ -24,7 +24,10 @@ class Main extends React.Component{
     render(){
         return(
             <>
-                <div className="loading_rwd">moment, aktualnie pracuję nad RWD...:-) </div>
+                <div className="loading_rwd">
+                    <div>moment, aktualnie pracuję nad RWD... </div><br></br>
+                    <i className="fas fa-smile-beam fa-3x"></i>
+                </div>
                 <div className="hide_all">
                     <Header napisy = {this.state.nav} opcje = {this.state.options}/>
                     <YellowStatsStripe stats_numbers = {this.state.stats_numbers} stats_text = {this.state.stats_text} stats_descr = {this.state.stats_descr} />
