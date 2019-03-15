@@ -1,10 +1,12 @@
+
 #section1 {
-    height:100vh;
-    width:100vw;
-    background: url('../images/header_start_img.jpg');
-    background-size:contain;
-    background-repeat: no-repeat;
+    // height:100vh;
+    // width:100vw;
+    background: url('./header_start_img.jpg');
+    background-size:cover;
+    // background-repeat: no-repeat;
     color: rgb(82, 80, 80);
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 
@@ -12,8 +14,9 @@
     display:flex;
     justify-content: flex-end;
     margin-right: 10em;
-   
+    border: 1px solid blue;
 }
+
 .nav_buttons:hover{
     border-top: 1px solid black;
     border-left: 1px solid black;
@@ -76,7 +79,7 @@
     margin-right: 15em;
 }
 .znaczek{
-    background: url("../images/decoration.png");
+    background: url("./decoration.png");
     height:20px;
     width: 200px;
     background-position: center;

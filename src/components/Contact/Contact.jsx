@@ -1,6 +1,7 @@
 import React from 'react';
+import './Contact.scss';
 
-class Section6 extends React.Component {
+class Contact extends React.Component {
 
     state = {
         name: '',
@@ -73,4 +74,4 @@ class Section6 extends React.Component {
     }
 }
 
-export default Section6;
+export default Contact;

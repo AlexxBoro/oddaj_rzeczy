@@ -1,14 +1,15 @@
 import React from 'react';
-import Form_Header from './Form_Header';
+import FormHeader from './FormHeader';
 import Form from './Form';
-import Section6 from './Section6';
+import Contact from '../Contact/Contact';
+import './FormAlertStripe.scss';
 
-class Form_General extends React.Component {
+class FormGeneral extends React.Component {
 
     render() {
         return(
             <>
-            <Form_Header />
+            <FormHeader />
 
             <div className="header_pasek">
                 <p className="pasek_wazne">Ważne!</p>
@@ -17,10 +18,10 @@ class Form_General extends React.Component {
 
             <Form />
             
-            <Section6 />
+            <Contact />
             </>
         )
     }
 }
 
-export default Form_General;
+export default FormGeneral;

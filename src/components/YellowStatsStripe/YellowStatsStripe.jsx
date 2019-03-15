@@ -1,6 +1,7 @@
 import React from 'react';
+import './YellowStatsStripe.scss';
 
-class Section2 extends React.Component {
+class YellowStatsStripe extends React.Component {
 
     render(){
         const stats_numbers = this.props.stats_numbers.map((e,i) => {
@@ -70,4 +71,4 @@ class Section2 extends React.Component {
     }
 }
 
-export default Section2;
+export default YellowStatsStripe;

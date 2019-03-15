@@ -1,9 +1,9 @@
 import React from 'react';
-import '../scss/main.scss';
+import './Header.scss';
 import {Link} from 'react-router-dom';
 
 
-class Section1 extends React.Component {
+class Header extends React.Component {
 
     handleClick = (e) => {
         if (e.target.innerText === "O co chodzi?") {
@@ -36,7 +36,7 @@ class Section1 extends React.Component {
     
                     <div className="log_buttons">
                         <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/login"><div className="nav_buttons">Zaloguj</div></Link>
-                        <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/rej"><div className="nav_buttons zaloz_konto">Załóż konto</div></Link>
+                        <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/register"><div className="nav_buttons zaloz_konto">Załóż konto</div></Link>
                     </div>
     
                     <div className="nav">
@@ -66,4 +66,4 @@ class Section1 extends React.Component {
 }
 
 
-export default Section1;
+export default Header;

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './FormHeader.scss';
 
 class Form_Header extends React.Component{
 

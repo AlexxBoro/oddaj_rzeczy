@@ -1,6 +1,7 @@
 import React from 'react';
+import './Organisations.scss';
 
-class Section5 extends React.Component {
+class Organisations extends React.Component {
     
     handleClick = (e) => {
 
@@ -182,4 +183,4 @@ class Section5 extends React.Component {
     }
 }
 
-export default Section5;
+export default Organisations;

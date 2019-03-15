@@ -1,7 +1,8 @@
 .header_container{
-    background: url("../images/header_logged_img.jpg");
-    background-size: 80%;
+    background: url("./header_logged_img.jpg");
+    // background-size: 80%;
     background-repeat: no-repeat;
+    background-position: cover;
     width: 100vw;
     height:95vh;
 }
@@ -76,7 +77,7 @@
     margin-right: 20em;
 }
 .znaczek_header{
-    background: url("../images/decoration.png");
+    background: url("./decoration.png");
     height:20px;
     width: 200px;
     background-position: center;

@@ -1,10 +1,12 @@
 import React from 'react';
-import Section1 from './Section1';
-import Section2 from './Section2';
-import Section3 from './Section3';
-import Section4 from './Section4';
-import Section5 from './Section5';
-import Section6 from './Section6';
+import './reset.scss';
+import Header from './Header/Header';
+import YellowStatsStripe from './YellowStatsStripe/YellowStatsStripe';
+import FourSteps from './FourSteps/FourSteps';
+import AboutUs from './AboutUs/AboutUs';
+import Organisations from './Organisations/Organisations';
+import Contact from './Contact/Contact';
+
 
 
 class Main extends React.Component{
@@ -22,12 +24,12 @@ class Main extends React.Component{
     render(){
         return(
             <>
-                <Section1 napisy = {this.state.nav} opcje = {this.state.options}/>
-                <Section2 stats_numbers = {this.state.stats_numbers} stats_text = {this.state.stats_text} stats_descr = {this.state.stats_descr} />
-                <Section3 section3_options={this.state.section3_options} section3_descr={this.state.section3_descr}/>
-                <Section4 />
-                <Section5 section5_org={this.state.section5_org} />
-                <Section6 />
+                <Header napisy = {this.state.nav} opcje = {this.state.options}/>
+                <YellowStatsStripe stats_numbers = {this.state.stats_numbers} stats_text = {this.state.stats_text} stats_descr = {this.state.stats_descr} />
+                <FourSteps section3_options={this.state.section3_options} section3_descr={this.state.section3_descr}/>
+                <AboutUs />
+                <Organisations section5_org={this.state.section5_org} />
+                <Contact />
             </>
         )
     }

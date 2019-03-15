@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/Main';
-import Login from './components/Login';
-import Form_General from './components/Form_General';
-import Rej from './components/Rejestracja';
+import FormGeneral from './components/From/FormGeneral';
+import RegisterUser from './components/RegisterUser/RegisterUser';
+import LoginUser from './components/LoginUser/LoginUser';
 
 import {
     HashRouter,
@@ -22,9 +22,9 @@ class App extends React.Component {
             <HashRouter>
                     <div>
                     <Route exact path='/' component={Main} />
-                    <Route path='/rej' component={Rej} />
-                    <Route path='/login' component={Login} />
-                    <Route path='/form' component={Form_General} />
+                    <Route path='/register' component={RegisterUser} />
+                    <Route path='/login' component={LoginUser} />
+                    <Route path='/form' component={FormGeneral} />
                     </div>
             </HashRouter>                  
         )
