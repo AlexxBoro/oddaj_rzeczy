@@ -24,12 +24,16 @@ class Main extends React.Component{
     render(){
         return(
             <>
-                <Header napisy = {this.state.nav} opcje = {this.state.options}/>
-                <YellowStatsStripe stats_numbers = {this.state.stats_numbers} stats_text = {this.state.stats_text} stats_descr = {this.state.stats_descr} />
-                <FourSteps section3_options={this.state.section3_options} section3_descr={this.state.section3_descr}/>
-                <AboutUs />
-                <Organisations section5_org={this.state.section5_org} />
-                <Contact />
+                <div className="loading_rwd">moment, aktualnie pracuję nad RWD...:-) </div>
+                <div className="hide_all">
+                    <Header napisy = {this.state.nav} opcje = {this.state.options}/>
+                    <YellowStatsStripe stats_numbers = {this.state.stats_numbers} stats_text = {this.state.stats_text} stats_descr = {this.state.stats_descr} />
+                    <FourSteps section3_options={this.state.section3_options} section3_descr={this.state.section3_descr}/>
+                    <AboutUs />
+                    <Organisations section5_org={this.state.section5_org} />
+                    <Contact />
+                </div>
+                
             </>
         )
     }

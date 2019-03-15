@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import {Link} from 'react-router-dom';
+import Logbar from './LogBar';
 
 
 class Header extends React.Component {
@@ -32,11 +33,14 @@ class Header extends React.Component {
         
         return (
             <>
+                
+
                 <div id="section1">
-    
+
+                    
+
                     <div className="log_buttons">
-                        <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/login"><div className="nav_buttons">Zaloguj</div></Link>
-                        <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/register"><div className="nav_buttons zaloz_konto">Załóż konto</div></Link>
+                        <Logbar />
                     </div>
     
                     <div className="nav">

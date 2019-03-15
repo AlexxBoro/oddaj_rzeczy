@@ -1,8 +1,10 @@
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-}
+// @media only screen and (max-width: 1000px) {
+//     #section2 {
+//       flex-direction: column;
+//     }
+    
+//   }
+
 
 #section2 {
     height: 300px;
@@ -11,6 +13,7 @@
     color: rgb(82, 80, 80);
     font-weight: 300;
     display: flex;
+    
 }
 
 .stat{

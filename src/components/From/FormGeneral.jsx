@@ -9,16 +9,24 @@ class FormGeneral extends React.Component {
     render() {
         return(
             <>
-            <FormHeader />
 
-            <div className="header_pasek">
-                <p className="pasek_wazne">Ważne!</p>
-                <p className="pasek_info">Uzupełnij szczegóły dotyczce twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
+            <div className="loading_rwd">moment, aktualnie pracuję nad RWD...:-) </div>
+
+
+            <div className="hide_all">
+                
+                <FormHeader />
+
+                <div className="header_pasek">
+                    <p className="pasek_wazne">Ważne!</p>
+                    <p className="pasek_info">Uzupełnij szczegóły dotyczce twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
+                </div>
+
+                <Form />
+                
+                <Contact />
+
             </div>
-
-            <Form />
-            
-            <Contact />
             </>
         )
     }

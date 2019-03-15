@@ -6,7 +6,7 @@ class Form extends React.Component {
 
     render(){
         return(
-            <div className="form_content_container">formularz</div>
+            <div className="form_content_container">tutaj będzie formularz</div>
         )
     }
 }
