@@ -1,0 +1,33 @@
+.opcje_container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 6em;
+    margin-top: 3em;
+}
+
+.opcja {
+    text-transform: uppercase;
+    width:150px;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid black;
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height:1.3em;
+    border-top: 1px solid rgb(66, 66, 66);
+    border-right: 1px solid rgb(66, 66, 66);
+    border-left: 1px solid rgb(134, 134, 134);
+    border-bottom: 1px solid rgb(134, 134, 134);
+}
+
+.opcja:hover{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    color:black;
+}

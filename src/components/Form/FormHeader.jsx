@@ -1,25 +1,15 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import './FormHeader.scss';
+import Navigation from '../Navigation/Navigation';
 
 class Form_Header extends React.Component{
-
-    state = {
-        header_nav: ["O co chodzi?", "O nas", "Fundacje i organizacje", "Kontakt"]
-    }
 
     showHiddenMenu = () => {
         document.querySelector('.header_pop_menu').classList.add('show_menu');
     }
 
-
     render(){
-
-        const header_nav = this.state.header_nav.map((e,i) => {
-            return <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/" className="nav_buttons_header" key={i}>{e}</Link>
-        });
-
-
         return(
             <div className="header_container">
 
@@ -28,10 +18,7 @@ class Form_Header extends React.Component{
                     <i onClick={this.showHiddenMenu} className="header_user_icon fas fa-cogs"></i>
                 </div>
 
-                <div className="nav_header">
-                    {header_nav}
-                </div>
-
+                <Navigation />
 
                 <div className="header_napis">Oddaj rzeczy, których już nie chcesz<br></br>
                     POTRZEBUJĄCYM <br></br>

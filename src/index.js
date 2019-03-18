@@ -8,15 +8,12 @@ import LoginUser from './components/LoginUser/LoginUser';
 import {
     HashRouter,
     Route,
-    Link,
-    Switch,
-    NavLink,
+    // Link,
+    // Switch,
+    // NavLink,
   } from 'react-router-dom';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render(){
         return (
             <HashRouter>

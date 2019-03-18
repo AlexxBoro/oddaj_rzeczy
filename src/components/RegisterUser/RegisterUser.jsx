@@ -1,11 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import './RegisterUser.scss';
+import LogBar from '../LogBar/LogBar';
+import Navigation from '../Navigation/Navigation';
 
 class RegisterUser extends React.Component{
 
     state = {
-        rej_nav: ["O co chodzi?", "O nas", "Fundacje i organizacje", "Kontakt"],
         email: '',
         password: '',
         repeat_password: ''
@@ -36,21 +37,14 @@ class RegisterUser extends React.Component{
 
     render(){
 
-        const rej_nav = this.state.rej_nav.map((e,i) => {
-            return <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/" className="rej_buttons_header" key={i}>{e}</Link>
-        });
+        
 
         return(
             <>
 
-            <div className="rej_log_buttons">
-                <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/login"><div className="rej_nav_buttons">Zaloguj</div></Link>
-                <div className="rej_nav_buttons rej_zaloz_konto">Załóż konto</div>
-            </div>
+            <LogBar />
 
-            <div className="rej_header">
-                {rej_nav}
-            </div>
+            <Navigation />
 
             <div class="rej_form_container">
                 

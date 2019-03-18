@@ -1,4 +1,4 @@
-
+// na czas gdy nie mam wersji mobilnej-----------------------------------
 @media only screen and (min-width: 1280px) {
     .loading_rwd {
       display: none !important; 
@@ -6,8 +6,7 @@
     .hide_all{
         display: block !important; 
     }
-  }
-
+}
 .loading_rwd{
     display: block;
     width:100vw;
@@ -22,59 +21,23 @@
     font-size: 1.5em;
     text-align: center;
 }
-
 .hide_all{
     display: none;
 }
+// ----------------------------------------------------------------------------
+
 
 #section1 {
-    height:100vh;
-    width:100vw;
+    // height:100vh;
+    // width:100vw;
     background: url('./header_start_img.jpg');
     background-size:cover;
     background-repeat: no-repeat;
-    // background-size:80%;
     color: rgb(82, 80, 80);
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 
-.nav{
-    display:flex;
-    justify-content: flex-end;
-    margin-right: 10em;
-    // border: 1px solid blue;
-}
-
-.nav_buttons:hover{
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    cursor: pointer;
-    color: black;
-}
-
-.nav_buttons {
-    margin-top: 10px;
-    padding: 10px;
-    height:20px;
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    
-}
-
-// .start_button {
-//     @extend .nav_buttons;
-//     border-top: 1px solid rgb(66, 66, 66);
-//     border-left: 1px solid rgb(66, 66, 66);
-//     border-right: 1px solid rgb(167, 167, 167);
-//     border-bottom: 1px solid rgb(167, 167, 167);
-//     padding-right: 1.5em;
-//     padding-left: 1.5em;
-// }
 
 .log_buttons {
     display: flex;
@@ -116,36 +79,3 @@
     
 }
 
-.opcje_container {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 6em;
-    margin-top: 3em;
-}
-
-.opcja {
-    text-transform: uppercase;
-    width:150px;
-    padding: 1em;
-    margin: 1em;
-    border: 1px solid black;
-    font-size: 1.5em;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    flex-wrap: wrap;
-    text-align: center;
-    line-height:1.3em;
-    border-top: 1px solid rgb(66, 66, 66);
-    border-right: 1px solid rgb(66, 66, 66);
-    border-left: 1px solid rgb(134, 134, 134);
-    border-bottom: 1px solid rgb(134, 134, 134);
-}
-
-.opcja:hover{
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    cursor: pointer;
-    color:black;
-}

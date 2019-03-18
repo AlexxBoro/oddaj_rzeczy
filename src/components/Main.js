@@ -11,8 +11,6 @@ import Contact from './Contact/Contact';
 
 class Main extends React.Component{
     state = {
-        nav: ["O co chodzi?", "O nas", "Fundacje i organizacje", "Kontakt"],
-        options: ["oddaj rzeczy", "zorganizuj zbiórkę"],
         stats_numbers: ["10", "7", "5"],
         stats_text: ["oddanych worków", "wspartych organizacji", "zorganizownych zbiórek"],
         stats_descr: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
@@ -29,7 +27,7 @@ class Main extends React.Component{
                     <i className="fas fa-smile-beam fa-3x"></i>
                 </div>
                 <div className="hide_all">
-                    <Header napisy = {this.state.nav} opcje = {this.state.options}/>
+                    <Header />
                     <YellowStatsStripe stats_numbers = {this.state.stats_numbers} stats_text = {this.state.stats_text} stats_descr = {this.state.stats_descr} />
                     <FourSteps section3_options={this.state.section3_options} section3_descr={this.state.section3_descr}/>
                     <AboutUs />
