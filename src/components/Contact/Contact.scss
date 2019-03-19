@@ -107,7 +107,7 @@ form{
     outline:none;
 }
 
-button{
+.button-submit{
     font-family: 'Open Sans', sans-serif;
     color:rgb(82, 80, 80);
     font-weight: 300;
@@ -118,7 +118,7 @@ button{
     outline:none;
    
 }
-button:hover{
+.button-submit:hover{
     cursor: pointer;
     border: 1px solid black;
     color: black;

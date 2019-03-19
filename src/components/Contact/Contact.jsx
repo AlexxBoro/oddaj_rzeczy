@@ -52,7 +52,7 @@ class Contact extends React.Component {
                                 <input className="input_message" type="text" placeholder="Wiadomość" value={this.state.message} onChange={this.onMessageChange}></input><br></br>
                             </div>
                             <div className="button">
-                                <button onSubmit={this.onFormSubmit}>Wyslij</button>
+                                <button className="button-submit" onSubmit={this.onFormSubmit}>Wyslij</button>
                             </div>
                         </form>
 

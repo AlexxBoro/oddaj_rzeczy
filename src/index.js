@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/Main';
-import FormGeneral from './components/From/FormGeneral';
+import FormGeneral from './components/Form/FormGeneral';
 import RegisterUser from './components/RegisterUser/RegisterUser';
 import LoginUser from './components/LoginUser/LoginUser';
 

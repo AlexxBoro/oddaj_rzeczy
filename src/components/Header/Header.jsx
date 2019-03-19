@@ -10,7 +10,10 @@ import HeaderOptions from '../HeaderOptions/HeaderOptions';
 class Header extends React.Component {
 
     // handleClick = (e) => {
-    //     if (e.target.innerText === "O co chodzi?") {
+        
+    //     window.scrollBy(0, 980);
+
+    //     if (nawigacja[i] === 0) {
     //         window.scrollBy(0, 980);
     //     }  
     //     else if (e.target.innerText === "O nas") {
@@ -27,18 +30,19 @@ class Header extends React.Component {
     render(){
         return (
             <>
-                <div id="section1">
+                <div id="header">
 
                     <LogBar />
                     
                     <Navigation />
                     
-                    <div className="napis">Zacznij pomagać! <br></br>
-                    Oddaj niechciane rzeczy w zaufane ręce <br></br>
+                    <div className="title">
+                    <p>Zacznij pomagać!</p>
+                    <p>Oddaj niechciane rzeczy w zaufane ręce</p> 
                     </div>
     
-                    <div className="znaczek_container">
-                        <div className="znaczek"></div>
+                    <div className="decoration-container">
+                        <div className="decoration"></div>
                     </div>
                     
                     <HeaderOptions />

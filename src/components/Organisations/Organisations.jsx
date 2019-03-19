@@ -1,5 +1,7 @@
 import React from 'react';
 import './Organisations.scss';
+import classnames from 'classnames';
+
 
 class Organisations extends React.Component {
     

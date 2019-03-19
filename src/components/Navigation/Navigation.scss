@@ -5,32 +5,93 @@ nav{
 }
 
 .nav{
-    display:flex;
-    justify-content: flex-end;
-    margin-right: 10em;
-}
-
-.nav_buttons:hover{
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    cursor: pointer;
-    color: black;
-}
-
-.nav_buttons {
-    margin-top: 10px;
-    padding: 10px;
-    height:20px;
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
+    @media only screen and (min-width: 1281px) {
+        display:flex;
+        justify-content: flex-end;
+        margin-right: 10em;
+        a {
+            text-decoration: none;
+            color: rgb(82, 80, 80);
+        }
+        &__element {
+            padding: 10px;
+            border: 1px solid transparent;
+        }
+        &__element:hover{
+            border: 1px solid black;
+            cursor: pointer;
+            color: black;
+        }
+    }
     
+    
+    @media only screen and (min-width: 551px) and (max-width: 1280px) {
+        display:flex;
+        justify-content: center;
+        margin-right: 0;
+        margin-top: 1em;
+        a {
+            text-decoration: none;
+            color: rgb(82, 80, 80);
+        }
+        &__element {
+            padding: 30px;
+        }    
+    }
+
+    @media only screen and (max-width: 550px) {
+        display: none;
+    }  
 }
 
-a {
-    text-decoration: none;
-    color: rgb(82, 80, 80);
+.hamburger {
+    @media only screen and (max-width: 550px) {
+        display: block;
+    }
+    margin: 0.7em;
+    margin-top:2em;
+    display: none;
+    width: 50px;
+    height: 45px;
+    border: 0;
+    border-top: 5px solid rgb(143, 138, 138);
+    background: transparent;
+    position: relative;
+    transition: 0.1s transform linear;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        border-top: 5px solid rgb(143, 138, 138);
+        transform: translateY(15px);
+    }
+    &::after {
+        transform: translateY(35px);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.nav-column-hidden {
+    display: none;
+}
+
+.nav-column-show {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    a {
+        text-decoration: none;
+        color: rgb(82, 80, 80);
+    }
+    &:focus{
+        font-weight: bold;
+        color: black;
+    }
+    @media only screen and (min-width: 550px) {
+        display: none;
+    }
 }

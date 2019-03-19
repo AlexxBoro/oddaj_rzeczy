@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './FourSteps.scss';
 
+
 class Section3 extends React.Component {
     render(){
         const opcje = this.props.section3_options.map((e,i) => {
