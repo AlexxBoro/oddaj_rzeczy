@@ -6,26 +6,30 @@ class Form extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            hideFormOne: false
+            hideFormOne: false,
+            showFormTwo: false
         }    
     }
 
     handleToggle(e){
         e.preventDefault();
         this.setState({
-            hideFormOne: !this.state.hideForm
+            hideFormOne: !this.state.hideFormOne,
+            showFormTwo: !this.state.showFormTwo
         })
     }
 
     render(){
         const {hideFormOne} = this.state;
+        const {showFormTwo} = this.state;
+
         return(
             <div className="form-content-container">
 
                 <form>
 
                     {/* 1/4 */}
-                    <div className={`form-part-one ${hideFormOne ? 'hide-part-of-the-form' : ''}`}>
+                    <div className={`form-part-one ${hideFormOne ? 'hide-form-one' : ''}`}>
                         <div className="form-part-one__title">Zaznacz co chcesz oddac:</div>
 
                         <div className="form-part-one__item">
@@ -67,9 +71,10 @@ class Form extends React.Component {
                     </div>
 
                     {/* 2./4 */}
-                    <div className="form-part-two ">
-
+                    <div className={`form-part-two ${showFormTwo ? 'show-form-two' : ''}`}>
+                         tu bedzie drugi formularz , drugie togglowanie!!!
                     </div>
+                    
 
                 </form>
 

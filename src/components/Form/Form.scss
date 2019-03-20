@@ -3,7 +3,7 @@
     width:100vw;
 }
 
-.hide-part-of-the-form{
+.hide-form-one{
     display: none !important;
 }
 
@@ -105,6 +105,11 @@
     height: 4em;
     width: 100vw;
     background-color: blue;
+    display: none;
+}
+
+.show-form-two{
+    display: block !important;
 }
 
 
