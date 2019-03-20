@@ -7,7 +7,8 @@ class Form extends React.Component {
         super(props)
         this.state = {
             hideFormOne: false,
-            showFormTwo: false
+            showFormTwo: false,
+            showFormThreeA: false
         }    
     }
 
@@ -19,9 +20,18 @@ class Form extends React.Component {
         })
     }
 
+    handleToggleThreeA(e){
+        e.preventDefault();
+        this.setState({
+            showFormTwo: !this.state.showFormTwo,
+            showFormThreeA: !this.state.showFormThreeA
+        })
+    }
+
     render(){
         const {hideFormOne} = this.state;
         const {showFormTwo} = this.state;
+        const {showFormThreeA} = this.state;
 
         return(
             <div className="form-content-container">
@@ -106,11 +116,23 @@ class Form extends React.Component {
 
                             <div className="form-part-two__button-container">
                                 <button className="form-part-two__button">Wstecz</button>
-                                <button className="form-part-two__button">Dalej</button>
+                                <button className="form-part-two__button" onClick={(e) => this.handleToggleThreeA(e)}>Dalej</button>
                             </div>
                             
 
                         </div>
+
+                    </div>
+                    {/* 3a/4 */}
+
+                    <div className={`form-part-3a-container ${showFormThreeA ? 'show-form-3a' : '' }`}>
+
+                            <div className="header_pasek">
+                                <p className="pasek_wazne">Ważne!</p>
+                                <p className="pasek_info">Jeśli wiesz, komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji, bądź celu ich pomocy.</p>
+                            </div>
+
+                            <div> tresc tresc tresc tresc</div>
 
                     </div>
                          
