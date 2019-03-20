@@ -26,10 +26,10 @@ class Main extends React.Component{
                 
                     <Header />
 
-                <div className="loading_rwd">
+                {/* <div className="loading_rwd">
                     <div>moment, aktualnie pracuję nad RWD... </div><br></br>
                     <i className="fas fa-smile-beam fa-3x"></i>
-                </div>  
+                </div>   */}
                   
                 <div className="hide_all">    
                     <YellowStatsStripe stats_numbers = {this.state.stats_numbers} stats_text = {this.state.stats_text} stats_descr = {this.state.stats_descr} />

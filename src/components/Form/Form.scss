@@ -1,5 +1,110 @@
-.form_content_container{
+.form-content-container{
     background-color: rgb(243,238,235);
     width:100vw;
-    
 }
+
+.hide-part-of-the-form{
+    display: none !important;
+}
+
+//-----------------------------step 1/4
+.form-part-one{
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin: 0 auto;
+    color: rgb(82, 80, 80);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    &__title{
+        color:black;
+        font-weight:600;
+        font-size:2em;
+        margin: 1em 0;
+    }
+    &__item{
+        padding:1em;
+    }
+    &__button{
+        margin-left: 1em;
+        margin: 1em 0;
+        font-family: 'Open Sans', sans-serif;
+        width:8em;
+        height:4em;
+        color:rgb(82, 80, 80);
+        font-weight: 300;
+        font-size: 1em;
+        background-color: rgb(237,239,238);
+        border: 1px solid rgb(82, 80, 80);
+        padding: 5px 15px;
+        outline:none;
+    }
+}
+
+.form-container{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    input{
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    span.__input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.5em;
+        width: 1.5em;
+        background-color: #eee;
+        border: 1px solid rgb(82, 80, 80);
+    }
+    span.__input:hover{
+        background-color: white;
+    }
+}
+
+.form-container input:checked ~ .__input {
+    background-color: rgb(254,209,0);
+}
+
+.__input:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.form-container input:checked ~ .__input:after {
+    display: block;
+}
+
+.form-container .__input:after {
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+//---------------------------------------step 2/4
+
+.form-part-two{
+    height: 4em;
+    width: 100vw;
+    background-color: blue;
+}
+
+

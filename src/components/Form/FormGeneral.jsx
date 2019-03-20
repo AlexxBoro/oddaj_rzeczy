@@ -10,13 +10,13 @@ class FormGeneral extends React.Component {
         return(
             <>
 
-            <div className="loading_rwd">
+            {/* <div className="loading_rwd">
                 <div>moment, aktualnie pracuję nad RWD... </div><br></br>
                 <i className="fas fa-smile-beam fa-3x"></i>
-            </div>
+            </div> */}
 
 
-            <div className="hide_all">
+            {/* <div className="hide_all"> */}
                 
                 <FormHeader />
 
@@ -29,7 +29,7 @@ class FormGeneral extends React.Component {
                 
                 <Contact />
 
-            </div>
+            {/* </div> */}
             </>
         )
     }

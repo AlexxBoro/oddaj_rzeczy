@@ -1,29 +1,29 @@
 // na czas gdy nie mam wersji mobilnej-----------------------------------
-@media only screen and (min-width: 1280px) {
-    .loading_rwd {
-      display: none !important; 
-    }
-    .hide_all{
-        display: block !important; 
-    }
-}
-.loading_rwd{
-    display: block;
-    width:100vw;
-    height:100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(82, 80, 80);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    background-color: rgb(236,239,238);
-    font-size: 1.5em;
-    text-align: center;
-}
-.hide_all{
-    display: none;
-}
+// @media only screen and (min-width: 1280px) {
+//     .loading_rwd {
+//       display: none !important; 
+//     }
+//     .hide_all{
+//         display: block !important; 
+//     }
+// }
+// .loading_rwd{
+//     display: block;
+//     width:100vw;
+//     height:100vh;
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+//     color: rgb(82, 80, 80);
+//     font-family: 'Open Sans', sans-serif;
+//     font-weight: 300;
+//     background-color: rgb(236,239,238);
+//     font-size: 1.5em;
+//     text-align: center;
+// }
+// .hide_all{
+//     display: none;
+// }
 // ----------------------------------------------------------------------------
 
 
