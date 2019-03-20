@@ -30,38 +30,44 @@ class Form extends React.Component {
 
                     {/* 1/4 */}
                     <div className={`form-part-one ${hideFormOne ? 'hide-form-one' : ''}`}>
+
+                        <div className="header_pasek">
+                            <p className="pasek_wazne">Ważne!</p>
+                            <p className="pasek_info">Uzupełnij szczegóły dotyczce twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
+                        </div>
+
                         <div className="form-part-one__title">Zaznacz co chcesz oddac:</div>
 
                         <div className="form-part-one__item">
-                            <label className="form-container" for="clothes">ubrania, które nadają się do ponownego użycia
+                            <label className="form-container" htmlFor="clothes">ubrania, które nadają się do ponownego użycia
                                 <input type="checkbox" name="clothes" id="clothes"></input>
                                 <span className="__input"></span>
                             </label>
                         </div>
 
                         <div className="form-part-one__item">
-                            <label className="form-container" for="clothes-bin">ubrania do wyrzucenia
+                            <label className="form-container" htmlFor="clothes-bin">ubrania do wyrzucenia
                                 <input type="checkbox" name="clothes-bin" id="clothes-bin"></input>
                                 <span className="__input"></span>
                             </label>
                         </div>
 
                         <div className="form-part-one__item">
-                            <label className="form-container" for="toys">zabawki
+                            <label className="form-container" htmlFor="toys">zabawki
                                 <input type="checkbox" name="toys" id="toys"></input>
                                 <span className="__input"></span>
                             </label>
                         </div>
 
                         <div className="form-part-one__item">
-                            <label className="form-container" for="books">książki
+                            <label className="form-container" htmlFor="books">książki
                                 <input type="checkbox" name="books" id="books"></input>
                                 <span className="__input"></span>
                             </label>
                         </div>
 
                         <div className="form-part-one__item">
-                            <label className="form-container" for="other">inne
+                            <label className="form-container" htmlFor="other">inne
                                 <input type="checkbox" name="other" id="other"></input>
                                 <span className="__input"></span>
                             </label>
@@ -71,11 +77,44 @@ class Form extends React.Component {
                     </div>
 
                     {/* 2./4 */}
-                    <div className={`form-part-two ${showFormTwo ? 'show-form-two' : ''}`}>
-                         tu bedzie drugi formularz , drugie togglowanie!!!
-                    </div>
-                    
+                    <div className={`form-part-two-container ${showFormTwo ? 'show-form-two' : ''}`}>
 
+                        <div className="form-part-two">
+                            {/* tu bedzie drugi formularz , drugie togglowanie!!! */}
+                            <div className="header_pasek">
+                                <p className="pasek_wazne">Ważne!</p>
+                                <p className="pasek_info">Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak zapakować rzeczy znajdziesz <a href="#">TUTAJ</a></p>
+                            </div>
+                            <div className="form-part-two__title">Podaj liczbę 60 l worków, w które spakowałeś rzeczy:</div>
+
+                            <div>
+                                <label htmlFor="worki" className="select-label">Liczba 60 l worków:</label>
+                                <select name="worki" id="worki">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value=">10">więcej</option>
+                                </select>
+                            </div>
+
+                            <div className="form-part-two__button-container">
+                                <button className="form-part-two__button">Wstecz</button>
+                                <button className="form-part-two__button">Dalej</button>
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+                         
+                        
                 </form>
 
             </div>
