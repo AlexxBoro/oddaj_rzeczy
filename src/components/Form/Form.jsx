@@ -8,7 +8,8 @@ class Form extends React.Component {
         this.state = {
             hideFormOne: false,
             showFormTwo: false,
-            showFormThreeA: false
+            showFormThreeA: false,
+            showFormThreeB: false
         }    
     }
 
@@ -28,10 +29,19 @@ class Form extends React.Component {
         })
     }
 
+    handleToggleThreeB(e){
+        e.preventDefault();
+        this.setState({
+            showFormThreeA: !this.state.showFormThreeA,
+            showFormThreeB: !this.state.showFormThreeB
+        })
+    }
+
     render(){
         const {hideFormOne} = this.state;
         const {showFormTwo} = this.state;
         const {showFormThreeA} = this.state;
+        const {showFormThreeB} = this.state;
 
         return(
             <div className="form-content-container">
@@ -170,11 +180,18 @@ class Form extends React.Component {
 
                                 <div className="form-part-3a__button-container">
                                 <button className="form-part-3a__button">Wstecz</button>
-                                <button className="form-part-3a__button">Szukaj</button>
+                                <button className="form-part-3a__button" onClick={(e) => this.handleToggleThreeB(e)}>Szukaj</button>
                             </div>
                         </div>
                     
-                    </div>       
+                    </div>  
+
+                    {/* 3b/4 */}
+
+                    <div className={`form-part-3b-container ${showFormThreeB ? 'show-form-3b' : ''}`}>
+                        <div>kontenerek na formularz czesc 3b/4 ,let's go!</div>
+                    </div>
+
                 </form>
             </div>
         )
