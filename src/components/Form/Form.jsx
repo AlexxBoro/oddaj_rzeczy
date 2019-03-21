@@ -39,6 +39,7 @@ class Form extends React.Component {
                 <form>
 
                     {/* 1/4 */}
+
                     <div className={`form-part-one ${hideFormOne ? 'hide-form-one' : ''}`}>
 
                         <div className="header_pasek">
@@ -87,10 +88,10 @@ class Form extends React.Component {
                     </div>
 
                     {/* 2./4 */}
+
                     <div className={`form-part-two-container ${showFormTwo ? 'show-form-two' : ''}`}>
 
                         <div className="form-part-two">
-                            {/* tu bedzie drugi formularz , drugie togglowanie!!! */}
                             <div className="header_pasek">
                                 <p className="pasek_wazne">Ważne!</p>
                                 <p className="pasek_info">Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak zapakować rzeczy znajdziesz <a href="#">TUTAJ</a></p>
@@ -100,6 +101,7 @@ class Form extends React.Component {
                             <div>
                                 <label htmlFor="worki" className="select-label">Liczba 60 l worków:</label>
                                 <select name="worki" id="worki">
+                                    <option value="0">- wybierz -</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -123,22 +125,57 @@ class Form extends React.Component {
                         </div>
 
                     </div>
+
                     {/* 3a/4 */}
 
                     <div className={`form-part-3a-container ${showFormThreeA ? 'show-form-3a' : '' }`}>
 
-                            <div className="header_pasek">
-                                <p className="pasek_wazne">Ważne!</p>
-                                <p className="pasek_info">Jeśli wiesz, komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji, bądź celu ich pomocy.</p>
+                        <div className="form-part-3a">
+                                
+                                <div className="header_pasek">
+                                    <p className="pasek_wazne">Ważne!</p>
+                                    <p className="pasek_info">Jeśli wiesz, komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji, bądź celu ich pomocy.</p>
+                                </div>
+
+                                <div className="form-part-3a__title">Lokalizacja:</div>
+
+                                
+                                <select name="lokalizacja" id="lokalizacja">
+                                    <option value="0">- wybierz -</option>
+                                    <option value="Warszawa">Warszawa</option>
+                                    <option value="Kraków">Kraków</option>
+                                    <option value="Wrocław">Wrocław</option>
+                                    <option value="Poznań">Poznań</option>
+                                    <option value="Katowice">Katowice</option>
+                                    <option value="Ustrzyki Dolne">Ustrzyki Dolne</option>
+                                    <option value="Łeba">Łeba</option>
+                                    <option value="Zakopane">Zakopane</option>
+                                    <option value="Helsinki">Helsinki</option>
+                                </select>
+                                
+                                <div className="form-part-3a__title--smaller">Komu chcesz pomóc?</div>
+
+                                <div className="form-part-3a__button-container--for-small-buttons">
+                                    <button className="form-part-3a__button--small-buttons">dzieciom</button>
+                                    <button className="form-part-3a__button--small-buttons">samotnym matkom</button>
+                                    <button className="form-part-3a__button--small-buttons">bezdomnym</button>
+                                </div>
+                                <div className="form-part-3a__button-container--for-small-buttons">
+                                    <button className="form-part-3a__button--small-buttons">niepełnosprawnym</button>
+                                    <button className="form-part-3a__button--small-buttons">osobom starszym</button>
+                                </div>
+
+                                <div className="form-part-3a__title--smaller">Wpisz nazwę konkretnej organizacji (opcjonalnie)</div>
+                                <input type="textarea"></input>
+
+                                <div className="form-part-3a__button-container">
+                                <button className="form-part-3a__button">Wstecz</button>
+                                <button className="form-part-3a__button">Szukaj</button>
                             </div>
-
-                            <div> tresc tresc tresc tresc</div>
-
-                    </div>
-                         
-                        
+                        </div>
+                    
+                    </div>       
                 </form>
-
             </div>
         )
     }
