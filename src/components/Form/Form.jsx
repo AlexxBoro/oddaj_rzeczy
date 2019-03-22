@@ -9,7 +9,9 @@ class Form extends React.Component {
             hideFormOne: false,
             showFormTwo: false,
             showFormThreeA: false,
-            showFormThreeB: false
+            showFormThreeB: false,
+            changeBackgroundColor: false,
+            showFormFour: false
         }    
     }
 
@@ -37,11 +39,60 @@ class Form extends React.Component {
         })
     }
 
+    handleToggleFour(e){
+        e.preventDefault();
+        this.setState({
+            showFormThreeB: !this.state.showFormThreeB,
+            showFormFour: !this.state.showFormFour
+        })
+    }
+
+    handleBackToFirstPartOfForm(e){
+        e.preventDefault();
+        this.setState({
+            hideFormOne: !this.state.hideFormOne,
+            showFormTwo: !this.state.showFormTwo
+        })
+    }
+
+    handleBackToSecondPartOfForm(e){
+        e.preventDefault();
+        this.setState({
+            showFormTwo: !this.state.showFormTwo,
+            showFormThreeA: !this.state.showFormThreeA
+        })
+    }
+
+    handleBackToThreeA(e){
+        e.preventDefault();
+        this.setState({
+            showFormThreeA: !this.state.showFormThreeA,
+            showFormThreeB: !this.state.showFormThreeB
+        })
+    }
+
+    changeBackgroundColor(e){
+        e.preventDefault();
+        if (this.state.changeBackgroundColor === false){
+            this.setState({
+                changeBackgroundColor: true
+            })
+        }
+        else if (this.state.changeBackgroundColor === true){
+            this.setState({
+                changeBackgroundColor: false
+            })
+        }
+    }
+
+
     render(){
         const {hideFormOne} = this.state;
         const {showFormTwo} = this.state;
         const {showFormThreeA} = this.state;
         const {showFormThreeB} = this.state;
+        const {changeBackgroundColor} = this.state;
+        const {showFormFour} = this.state;
 
         return(
             <div className="form-content-container">
@@ -127,7 +178,7 @@ class Form extends React.Component {
                             </div>
 
                             <div className="form-part-two__button-container">
-                                <button className="form-part-two__button">Wstecz</button>
+                                <button className="form-part-two__button" onClick={(e) => this.handleBackToFirstPartOfForm(e)}>Wstecz</button>
                                 <button className="form-part-two__button" onClick={(e) => this.handleToggleThreeA(e)}>Dalej</button>
                             </div>
                             
@@ -166,10 +217,12 @@ class Form extends React.Component {
                                 <div className="form-part-3a__title--smaller">Komu chcesz pomóc?</div>
 
                                 <div className="form-part-3a__button-container--for-small-buttons">
-                                    <button className="form-part-3a__button--small-buttons">dzieciom</button>
-                                    <button className="form-part-3a__button--small-buttons">samotnym matkom</button>
+
+                                    <button className={`form-part-3a__button--small-buttons ${changeBackgroundColor ? 'change-background-color-to-yellow' : ''}`} onClick={(e) => this.changeBackgroundColor(e)}>dzieciom</button>
+                                    <button className={`form-part-3a__button--small-buttons ${changeBackgroundColor ? 'change-background-color-to-yellow' : ''}`} onClick={(e) => this.changeBackgroundColor(e)}>samotnym matkom</button>
                                     <button className="form-part-3a__button--small-buttons">bezdomnym</button>
                                 </div>
+
                                 <div className="form-part-3a__button-container--for-small-buttons">
                                     <button className="form-part-3a__button--small-buttons">niepełnosprawnym</button>
                                     <button className="form-part-3a__button--small-buttons">osobom starszym</button>
@@ -179,9 +232,9 @@ class Form extends React.Component {
                                 <input type="textarea"></input>
 
                                 <div className="form-part-3a__button-container">
-                                <button className="form-part-3a__button">Wstecz</button>
-                                <button className="form-part-3a__button" onClick={(e) => this.handleToggleThreeB(e)}>Szukaj</button>
-                            </div>
+                                    <button className="form-part-3a__button" onClick={(e) => this.handleBackToSecondPartOfForm(e)}>Wstecz</button>
+                                    <button className="form-part-3a__button" onClick={(e) => this.handleToggleThreeB(e)}>Szukaj</button>
+                                </div>
                         </div>
                     
                     </div>  
@@ -189,7 +242,56 @@ class Form extends React.Component {
                     {/* 3b/4 */}
 
                     <div className={`form-part-3b-container ${showFormThreeB ? 'show-form-3b' : ''}`}>
-                        <div>kontenerek na formularz czesc 3b/4 ,let's go!</div>
+
+                        <div className="form-part-3b">
+
+                            <div className="header_pasek">
+                                <p className="pasek_wazne">Ważne!</p>
+                                <p className="pasek_info">Na podstwaie Twoich kryteriów oraz rzeczy, które masz do oddania wybraliśmy organizacje, którym możesz pomóc. Wybierz jedną, do której trafi Twoja przesyłka.</p>
+                            </div>
+
+                            <div className="form-part-3b__title">Wybierz organizację, której chcesz pomóc:</div>
+
+                            <div className="information-container">
+                                <hr align="left"></hr>
+                                <p className="nazwa_org">Fundacja "Dbam o Zdrowie"</p>
+                                <p className="cel_org">Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
+                                <hr align="left"></hr>
+                            </div>
+                            <div className="information-container">
+                                <p className="nazwa_org">Fundacja "Dla dzieci"</p>
+                                <p className="cel_org">Cel i misja: Pomoc dzieciom z ubogich rodzin.</p>
+                                <hr align="left"></hr>
+                            </div>
+
+                            <div className="form-part-3b__button-container">
+                                <button className="form-part-3b__button" onClick={(e) => this.handleBackToThreeA(e)}>Wstecz</button>
+                                <button className="form-part-3b__button" onClick={(e) => this.handleToggleFour(e)}>Dalej</button>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                    {/* 4/4 */}
+                    <div className={`form-part-4-container ${showFormFour ? 'show-form-4' : '' }`}>
+
+                        <div className="form-part-4">
+
+                            <div className="header_pasek">
+                                <p className="pasek_wazne">Ważne!</p>
+                                <p className="pasek_info">Podaj adres oraz termin odbioru rzeczy.</p>
+                            </div>
+
+                            <div className="form-part-4__title">Podaj adres oraz termin odbioru rzeczy przez kuriera</div>
+
+                            <div className="form-part-4__button-container">
+                                <button className="form-part-4__button">Wstecz</button>
+                                <button className="form-part-4__button">Dalej</button>
+                            </div>
+
+                        </div>
+                    
                     </div>
 
                 </form>

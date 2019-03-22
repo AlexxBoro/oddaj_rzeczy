@@ -243,6 +243,11 @@
     }
 }
 
+.change-background-color-to-yellow{
+    background-color: rgb(254,209,0);
+}
+
+
 //----------------------------------------step 3b/4
 
 .form-part-3b-container{
@@ -251,6 +256,100 @@
 
 .show-form-3b{
     display: block !important;
+}
+
+.form-part-3b{
+    display: flex;
+    flex-direction: column;
+    color: rgb(82, 80, 80);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    &__title{
+        padding-top:0.5em;
+        color:black;
+        font-weight:600;
+        font-size:2em;
+        margin: 1em 0;
+        padding-left:5em;
+    }    
+    &__button-container{
+        margin-left: 11em;
+        margin-bottom: 6em;
+    }
+    &__button{
+        margin-right: 2em;
+        font-family: 'Open Sans', sans-serif;
+        width:8em;
+        height:4em;
+        color:rgb(82, 80, 80);
+        font-weight: 300;
+        font-size: 1em;
+        background-color: rgb(237,239,238);
+        border: 1px solid rgb(82, 80, 80);
+        padding: 5px 15px;
+        outline:none;
+    }   
+    .information-container{
+        // border: 1px solid blue;
+        text-align: left;
+        margin-left: 11em;
+        
+    }
+    
+    hr{
+        width: 26em;
+        margin-bottom: 1.5em;
+    }
+    .nazwa_org{
+        font-size:1.3em;
+    }
+    .cel_org{
+        font-style: italic;
+        margin-bottom: 1em;
+    } 
+}
+
+//-----------------------------------------step 4/4
+
+.form-part-4-container{
+    display: none;
+}
+
+.show-form-4{
+    display: block !important;
+}
+
+.form-part-4{
+    display: flex;
+    flex-direction: column;
+    color: rgb(82, 80, 80);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    &__title{
+        padding-top:0.5em;
+        color:black;
+        font-weight:600;
+        font-size:2em;
+        margin: 1em 0;
+        padding-left:5em;
+    }   
+    &__button-container{
+        margin-left: 11em;
+        margin-bottom: 6em;
+    }  
+    &__button{
+        margin-right: 2em;
+        font-family: 'Open Sans', sans-serif;
+        width:8em;
+        height:4em;
+        color:rgb(82, 80, 80);
+        font-weight: 300;
+        font-size: 1em;
+        background-color: rgb(237,239,238);
+        border: 1px solid rgb(82, 80, 80);
+        padding: 5px 15px;
+        outline:none;
+    }   
 }
 
 
