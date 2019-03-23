@@ -1,11 +1,320 @@
 import React from 'react';
-
 import './Form.scss';
 
+
 class Form extends React.Component {
-    render() {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            hideFormOne: false,
+            showFormTwo: false,
+            showFormThreeA: false,
+            showFormThreeB: false,
+            changeBackgroundColor: false,
+            showFormFour: false,
+            clickedTags: {}, // [klucz]: boolean
+
+            /**
+             * {
+             *  dzieciom: true,
+             *  matkom: false,
+             * }
+             *
+             * !undefined === true
+             */
+
+            stepNumber: 0,
+        }
+    }
+
+    handleToggle(e){
+        e.preventDefault();
+        this.setState({
+            stepNumber: 1,
+        })
+    }
+
+    handleToggleThreeA(e){
+        e.preventDefault();
+        this.setState({
+            showFormTwo: !this.state.showFormTwo,
+            showFormThreeA: !this.state.showFormThreeA
+        })
+    }
+
+    handleToggleThreeB(e){
+        e.preventDefault();
+        this.setState({
+            showFormThreeA: !this.state.showFormThreeA,
+            showFormThreeB: !this.state.showFormThreeB
+        })
+    }
+
+    handleToggleFour(e){
+        e.preventDefault();
+        this.setState({
+            showFormThreeB: !this.state.showFormThreeB,
+            showFormFour: !this.state.showFormFour
+        })
+    }
+
+    handleBackToFirstPartOfForm(e){
+        e.preventDefault();
+        this.setState({
+            hideFormOne: !this.state.hideFormOne,
+            showFormTwo: !this.state.showFormTwo
+        })
+    }
+
+    handleBackToSecondPartOfForm(e){
+        e.preventDefault();
+        this.setState({
+            showFormTwo: !this.state.showFormTwo,
+            showFormThreeA: !this.state.showFormThreeA
+        })
+    }
+
+    handleBackToThreeA(e){
+        e.preventDefault();
+        this.setState({
+            showFormThreeA: !this.state.showFormThreeA,
+            showFormThreeB: !this.state.showFormThreeB
+        })
+    }
+
+    changeBackgroundColor(e, param){
+        e.preventDefault();
+        if (this.state.changeBackgroundColor === false){
+            this.setState({
+                changeBackgroundColor: true
+            })
+        }
+        else if (this.state.changeBackgroundColor === true){
+            this.setState({
+                changeBackgroundColor: false
+            })
+        }
+
+        const selectedTags = this.state.clickedTags;
+        selectedTags[param] = !selectedTags[param];
+
+        this.setState({
+            clickedTags: selectedTags,
+        });
+    }
+
+
+    render(){
+        const {hideFormOne} = this.state;
+        const {showFormTwo} = this.state;
+        const {showFormThreeA} = this.state;
+        const {showFormThreeB} = this.state;
+        const {changeBackgroundColor} = this.state;
+        const {showFormFour} = this.state;
+
         return(
-            <div className="Form">formularz</div>
+            <div className="form-content-container">
+
+                <form onSubmit={e => e.preventDefault() || e.stopPropagation() || console.log('Submit!')}>
+
+                    {/* 1/4 */}
+
+                    <div className={`form-part-one ${this.state.stepNumber === 0 ? '': 'hide-form-one'}`}>
+
+                        <div className="header_pasek">
+                            <p className="pasek_wazne">Ważne!</p>
+                            <p className="pasek_info">Uzupełnij szczegóły dotyczce twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
+                        </div>
+
+                        <div className="form-part-one__title">Zaznacz co chcesz oddac:</div>
+
+                        <div className="form-part-one__item">
+                            <label className="form-container" htmlFor="clothes">ubrania, które nadają się do ponownego użycia
+                                <input type="checkbox" name="clothes" id="clothes"></input>
+                                <span className="__input"></span>
+                            </label>
+                        </div>
+
+                        <div className="form-part-one__item">
+                            <label className="form-container" htmlFor="clothes-bin">ubrania do wyrzucenia
+                                <input type="checkbox" name="clothes-bin" id="clothes-bin"></input>
+                                <span className="__input"></span>
+                            </label>
+                        </div>
+
+                        <div className="form-part-one__item">
+                            <label className="form-container" htmlFor="toys">zabawki
+                                <input type="checkbox" name="toys" id="toys"></input>
+                                <span className="__input"></span>
+                            </label>
+                        </div>
+
+                        <div className="form-part-one__item">
+                            <label className="form-container" htmlFor="books">książki
+                                <input type="checkbox" name="books" id="books"></input>
+                                <span className="__input"></span>
+                            </label>
+                        </div>
+
+                        <div className="form-part-one__item">
+                            <label className="form-container" htmlFor="other">inne
+                                <input type="checkbox" name="other" id="other"></input>
+                                <span className="__input"></span>
+                            </label>
+                        </div>
+
+                        <button className="form-part-one__button" onClick={(e) => this.handleToggle(e)}>Dalej</button>
+                    </div>
+
+                    {/* 2./4 */}
+
+                    <div className={`form-part-two-container ${this.state.stepNumber === 1 ? 'show-form-two' : ''}`}>
+
+                        <div className="form-part-two">
+                            <div className="header_pasek">
+                                <p className="pasek_wazne">Ważne!</p>
+                                <p className="pasek_info">Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak zapakować rzeczy znajdziesz <a href="#">TUTAJ</a></p>
+                            </div>
+                            <div className="form-part-two__title">Podaj liczbę 60 l worków, w które spakowałeś rzeczy:</div>
+
+                            <div>
+                                <label htmlFor="worki" className="select-label">Liczba 60 l worków:</label>
+                                <select name="worki" id="worki">
+                                    <option value="0">- wybierz -</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value=">10">więcej</option>
+                                </select>
+                            </div>
+
+                            <div className="form-part-two__button-container">
+                                <button className="form-part-two__button" onClick={(e) => this.handleBackToFirstPartOfForm(e)}>Wstecz</button>
+                                <button className="form-part-two__button" onClick={(e) => this.handleToggleThreeA(e)}>Dalej</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    {/* 3a/4 */}
+
+                    <div className={`form-part-3a-container ${showFormThreeA ? 'show-form-3a' : '' }`}>
+
+                        <div className="form-part-3a">
+
+                                <div className="header_pasek">
+                                    <p className="pasek_wazne">Ważne!</p>
+                                    <p className="pasek_info">Jeśli wiesz, komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji, bądź celu ich pomocy.</p>
+                                </div>
+
+                                <div className="form-part-3a__title">Lokalizacja:</div>
+
+
+                                <select name="lokalizacja" id="lokalizacja">
+                                    <option value="0">- wybierz -</option>
+                                    <option value="Warszawa">Warszawa</option>
+                                    <option value="Kraków">Kraków</option>
+                                    <option value="Wrocław">Wrocław</option>
+                                    <option value="Poznań">Poznań</option>
+                                    <option value="Katowice">Katowice</option>
+                                    <option value="Ustrzyki Dolne">Ustrzyki Dolne</option>
+                                    <option value="Łeba">Łeba</option>
+                                    <option value="Zakopane">Zakopane</option>
+                                    <option value="Helsinki">Helsinki</option>
+                                </select>
+
+                                <div className="form-part-3a__title--smaller">Komu chcesz pomóc?</div>
+
+                                <div className="form-part-3a__button-container--for-small-buttons">
+
+                                    <button className={`form-part-3a__button--small-buttons ${this.state.clickedTags['dzieciom'] ? 'change-background-color-to-yellow' : ''}`} onClick={(e) => this.changeBackgroundColor(e, 'dzieciom')}>dzieciom</button>
+                                    <button className={`form-part-3a__button--small-buttons ${this.state.clickedTags['matkom'] ? 'change-background-color-to-yellow' : ''}`} onClick={(e) => this.changeBackgroundColor(e, 'matkom')}>samotnym matkom</button>
+                                    <button className="form-part-3a__button--small-buttons">bezdomnym</button>
+                                </div>
+
+                                <div className="form-part-3a__button-container--for-small-buttons">
+                                    <button className="form-part-3a__button--small-buttons">niepełnosprawnym</button>
+                                    <button className="form-part-3a__button--small-buttons">osobom starszym</button>
+                                </div>
+
+                                <div className="form-part-3a__title--smaller">Wpisz nazwę konkretnej organizacji (opcjonalnie)</div>
+                                <input type="textarea"/>
+
+                                <div className="form-part-3a__button-container">
+                                    <button className="form-part-3a__button" onClick={(e) => this.handleBackToSecondPartOfForm(e)}>Wstecz</button>
+                                    <button className="form-part-3a__button" onClick={(e) => this.handleToggleThreeB(e)}>Szukaj</button>
+                                </div>
+                        </div>
+
+                    </div>
+
+                    {/* 3b/4 */}
+
+                    <div className={`form-part-3b-container ${showFormThreeB ? 'show-form-3b' : ''}`}>
+
+                        <div className="form-part-3b">
+
+                            <div className="header_pasek">
+                                <p className="pasek_wazne">Ważne!</p>
+                                <p className="pasek_info">Na podstwaie Twoich kryteriów oraz rzeczy, które masz do oddania wybraliśmy organizacje, którym możesz pomóc. Wybierz jedną, do której trafi Twoja przesyłka.</p>
+                            </div>
+
+                            <div className="form-part-3b__title">Wybierz organizację, której chcesz pomóc:</div>
+
+                            <div className="information-container">
+                                <hr align="left"></hr>
+                                <p className="nazwa_org">Fundacja "Dbam o Zdrowie"</p>
+                                <p className="cel_org">Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</p>
+                                <hr align="left"></hr>
+                            </div>
+                            <div className="information-container">
+                                <p className="nazwa_org">Fundacja "Dla dzieci"</p>
+                                <p className="cel_org">Cel i misja: Pomoc dzieciom z ubogich rodzin.</p>
+                                <hr align="left"></hr>
+                            </div>
+
+                            <div className="form-part-3b__button-container">
+                                <button className="form-part-3b__button" onClick={(e) => this.handleBackToThreeA(e)}>Wstecz</button>
+                                <button className="form-part-3b__button" onClick={(e) => this.handleToggleFour(e)}>Dalej</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    {/* 4/4 */}
+                    <div className={`form-part-4-container ${showFormFour ? 'show-form-4' : '' }`}>
+
+                        <div className="form-part-4">
+
+                            <div className="header_pasek">
+                                <p className="pasek_wazne">Ważne!</p>
+                                <p className="pasek_info">Podaj adres oraz termin odbioru rzeczy.</p>
+                            </div>
+
+                            <div className="form-part-4__title">Podaj adres oraz termin odbioru rzeczy przez kuriera</div>
+
+                            <div className="form-part-4__button-container">
+                                <button className="form-part-4__button">Wstecz</button>
+                                <button className="form-part-4__button">Dalej</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
         )
     }
 }
