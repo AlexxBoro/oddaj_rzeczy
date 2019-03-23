@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './FourSteps.scss';
+
 
 const sections = [{
     iconName: '',
@@ -89,8 +91,8 @@ class Section3 extends React.Component {
                         </div>
                     </div>
 
-                    <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/rej">
-                        <div className="zaloz_konto_sekcja3">załóż konto</div>
+                    <Link style={{ textDecoration: 'none', color: 'rgb(82, 80, 80)' }} to="/register">
+                    <div className="zaloz_konto_sekcja3">załóż konto</div>
                     </Link>
 
                 </div>

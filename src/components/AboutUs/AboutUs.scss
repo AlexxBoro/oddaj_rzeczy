@@ -14,7 +14,7 @@
 }
 
 .image_container{
-    background: url('../images/about.jpg');
+    background: url('./about.jpg');
     background-size:cover;
     width:50vw;
 }
@@ -25,7 +25,7 @@
     margin-bottom:1.5em;
 }
 .znaczek_section4{
-    background: url("../images/decoration.png");
+    background: url("./decoration.png");
     height:20px;
     width: 200px;
     background-position: center;

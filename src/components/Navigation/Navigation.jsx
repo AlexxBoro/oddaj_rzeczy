@@ -3,17 +3,12 @@ import './Navigation.scss';
 import { routes } from "../../routes";
 
 class Navigation extends React.Component{
-    navClick = (route) => {
-        if (this.props.onNavigation) {
-            this.props.onNavigation(route);
-        }
-    };
-
     showHiddenMenu = (e) => {
         // document.querySelector("#hidden-menu").className === "nav-column-hidden" ?
         // console.log("on ma klase nav-column-hidden") :
         // console.log("NIE ma klasy nav-colum-hidden");
 
+        // Pobądź się tych query selectorów - classnames na pomoc! :)
         if (document.querySelector("#hidden-menu").className === "nav-column-hidden"){
             document.querySelector("#hidden-menu").classList.remove("nav-column-hidden");
             document.querySelector("#hidden-menu").classList.add("nav-column-show");
@@ -25,7 +20,6 @@ class Navigation extends React.Component{
     }
 
     render(){
-
         const nawigacjaMap = routes.map((e, i) => {
             return <a href={`#${e.route}`} key={i} className="nav__element" onClick={() => this.navClick(e.route)}>{e.title}</a>
         });

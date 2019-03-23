@@ -1,11 +1,37 @@
+// @media only screen and (max-width: 1000px) {
+//     .section5_container {
+//       display: none !important; 
+//       background-color: yellow;
+//     }
+//     #section5{
+//         display: none !important; 
+//         background-color: yellow;
+//     }
+//   }
+
+// $tablet-width: 768px;
+// @mixin tablet {
+//   @media (min-width: #{$tablet-width}) {
+//    @content;
+//   }
+// }
+// #section5 {
+//   margin: 0 auto;
+//   @include tablet {
+//    display: none !important;
+//   }
+// }
+
 #section5 {
     height: 100vh;
     width: 100vw;
     background-color: rgb(255,255,255);
+  
     display:flex;
     justify-content: center;
     align-items: center;
     color: rgb(82, 80, 80);
+    // color: yellow;
 }
 
 .section5_container{
@@ -27,7 +53,7 @@
 }
 
 .znaczek_section5{
-    background: url("../images/decoration.png");
+    background: url("./decoration.png");
     height:20px;
     width: 200px;
     background-position: center;

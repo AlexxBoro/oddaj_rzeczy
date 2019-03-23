@@ -1,6 +1,7 @@
 import React from 'react';
+import './Contact.scss';
 
-class Section6 extends React.Component {
+class Contact extends React.Component {
 
     state = {
         name: '',
@@ -53,7 +54,7 @@ class Section6 extends React.Component {
                                 <input className="input_message" type="text" placeholder="Wiadomość" value={this.state.message} onChange={this.onMessageChange}></input><br></br>
                             </div>
                             <div className="button">
-                                <button onSubmit={this.onFormSubmit}>Wyslij</button>
+                                <button className="button-submit" onSubmit={this.onFormSubmit}>Wyslij</button>
                             </div>
                         </form>
 
@@ -75,4 +76,4 @@ class Section6 extends React.Component {
     }
 }
 
-export default Section6;
+export default Contact;

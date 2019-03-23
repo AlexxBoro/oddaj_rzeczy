@@ -8,8 +8,7 @@ import Organisations from './Organisations/Organisations';
 import Contact from './Contact/Contact';
 
 
-
-class Main extends React.Component{
+class Main extends React.Component {
     // Do propsów :)
     state = {
         stats_numbers: ["10", "7", "5"],
@@ -20,12 +19,12 @@ class Main extends React.Component{
         section5_org: ["Fundacjom", "Organizacjom pozarządowym", "Lokalnym zbiórkom"]
     };
 
-    render(){
+    render() {
         console.log(this.props);
 
-        return(
+        return (
             <>
-                    <Header />
+                <Header/>
 
                 {/* <div className="loading_rwd">
                     <div>moment, aktualnie pracuję nad RWD... </div><br></br>
@@ -33,13 +32,14 @@ class Main extends React.Component{
                 </div>   */}
 
                 <div className="hide_all">
-                    <YellowStatsStripe stats_numbers = {this.state.stats_numbers} stats_text = {this.state.stats_text} stats_descr = {this.state.stats_descr} />
-                    <FourSteps section3_options={this.state.section3_options} section3_descr={this.state.section3_descr}/>
-                    <AboutUs />
-                    <Organisations section5_org={this.state.section5_org} />
-                    <Contact />
+                    <YellowStatsStripe stats_numbers={this.state.stats_numbers} stats_text={this.state.stats_text}
+                                       stats_descr={this.state.stats_descr}/>
+                    <FourSteps section3_options={this.state.section3_options}
+                               section3_descr={this.state.section3_descr}/>
+                    <AboutUs/>
+                    <Organisations section5_org={this.state.section5_org}/>
+                    <Contact/>
                 </div>
-
             </>
         )
     }

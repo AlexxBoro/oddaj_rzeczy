@@ -1,7 +1,9 @@
 import React from 'react';
+import './Organisations.scss';
 import classnames from 'classnames';
 
-class Section5 extends React.Component {
+
+class Organisations extends React.Component {
     constructor(props) {
         super(props);
 
@@ -201,4 +203,4 @@ class Section5 extends React.Component {
     }
 }
 
-export default Section5;
+export default Organisations;

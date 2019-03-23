@@ -1,0 +1,104 @@
+// na czas gdy nie mam wersji mobilnej-----------------------------------
+// @media only screen and (min-width: 1280px) {
+//     .loading_rwd {
+//       display: none !important; 
+//     }
+//     .hide_all{
+//         display: block !important; 
+//     }
+// }
+// .loading_rwd{
+//     display: block;
+//     width:100vw;
+//     height:100vh;
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+//     color: rgb(82, 80, 80);
+//     font-family: 'Open Sans', sans-serif;
+//     font-weight: 300;
+//     background-color: rgb(236,239,238);
+//     font-size: 1.5em;
+//     text-align: center;
+// }
+// .hide_all{
+//     display: none;
+// }
+// ----------------------------------------------------------------------------
+
+
+#header {
+    background: url('./header_start_img.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: rgb(82, 80, 80);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    padding-bottom:3em;
+    @media only screen and (max-width: 1280px) {
+        // background: url('./header_start_img.jpg');
+        // background-size:cover;
+        // background-repeat: no-repeat;
+        background: rgb(240, 238, 238);
+        font-weight: 500;
+    }
+    @media only screen and (max-width: 550px) {
+        background: rgb(240, 238, 238);
+        font-weight: 500;
+    }
+}
+
+
+.title {
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 3em;
+    margin-top: 5em;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    line-height:1.3em;
+    p:first-child {
+        margin-right:5em;
+        margin-bottom: 0.5em;
+        @media only screen and (max-width: 1280px) {
+            margin-right:0;
+        }
+    }
+    p:last-child {
+        @media only screen and (max-width: 1280px) {
+            text-align: center;
+        }
+    }
+    @media only screen and (max-width: 1280px) {
+        margin-right:0;
+        align-items: center;
+        margin-top:1.5em;
+    }
+}
+
+.decoration-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top:3em;
+    margin-bottom:1em;
+    margin-right: 6em;
+    @media only screen and (max-width: 1280px) {
+        justify-content: center;
+        margin-right: 0;
+    }
+    .decoration {
+        background: url("./decoration.png");
+        height:20px;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+        margin-right: 11em;
+        @media only screen and (max-width: 1280px) {
+            margin-right: 0;
+        }
+    }
+}
+
+

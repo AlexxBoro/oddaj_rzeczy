@@ -1,6 +1,7 @@
 import React from 'react';
+import './AboutUs.scss';
 
-class Section4 extends React.Component {
+class AboutUs extends React.Component {
     render(){
         return(
             <div id="section4">
@@ -29,4 +30,4 @@ class Section4 extends React.Component {
     }
 }
 
-export default Section4;
+export default AboutUs;
