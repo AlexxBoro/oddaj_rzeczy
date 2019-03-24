@@ -1,8 +1,10 @@
 .header_container{
     background: url("./header_logged_img.jpg");
-    // background-size: 80%;
+    
     background-repeat: no-repeat;
-    background-position: cover;
+    // background-position: cover;
+    background-position: bottom;
+    background-size: cover;
     width: 100vw;
     height:95vh;
     color: rgb(82, 80, 80);
@@ -71,7 +73,7 @@
     justify-content: flex-end;
     font-family: 'Open Sans', sans-serif;
     margin-top: 3em;
-    margin-right: 5em;
+    margin-right: 8em;
     text-align: center;
     line-height:1.3em;
     color: rgb(82, 80, 80);

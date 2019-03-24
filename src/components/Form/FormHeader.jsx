@@ -20,7 +20,7 @@ class Form_Header extends React.Component{
 
                 <Navigation />
 
-                <div className="header_napis">Oddaj rzeczy, których już nie chcesz<br></br>
+                <div className="header_napis">Oddaj zbędne rzeczy<br></br>
                     POTRZEBUJĄCYM <br></br>
                 </div>
                 <div className="znaczek_header_container">
