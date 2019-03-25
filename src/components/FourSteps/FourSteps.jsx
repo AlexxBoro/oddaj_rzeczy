@@ -13,7 +13,7 @@ class Section3 extends React.Component {
         });
 
         return(
-            <div id="section3">
+            <div id="four-steps">
                 <div className="section3_container">
 
                     <div className="napis_sekcja3">Wystarczą 4 proste kroki</div>

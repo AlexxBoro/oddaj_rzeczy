@@ -22,7 +22,7 @@
 //   }
 // }
 
-#section5 {
+#organisations {
     height: 100vh;
     width: 100vw;
     background-color: rgb(255,255,255);
@@ -31,7 +31,6 @@
     justify-content: center;
     align-items: center;
     color: rgb(82, 80, 80);
-    // color: yellow;
 }
 
 .section5_container{
@@ -159,18 +158,6 @@ hr{
 }
 
 
-.numerki{
-    // border: 1px solid blue;
-    display: flex;
-    justify-content: center;
-}
-.numerek{
-    padding: 0.3em;
-}
-.numerek_wybr{
-    border: 1px solid black;
-    color:black;
-}
 
 
 

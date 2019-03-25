@@ -34,7 +34,7 @@ class Contact extends React.Component {
 
     render() {
         return(
-            <div id="section6">
+            <div id="contact">
 
                 <div className="container1">
                     <div className="subcont1"></div>

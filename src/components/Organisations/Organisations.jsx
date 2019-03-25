@@ -1,7 +1,5 @@
 import React from 'react';
 import './Organisations.scss';
-import classnames from 'classnames';
-
 
 class Organisations extends React.Component {
     
@@ -31,7 +29,7 @@ class Organisations extends React.Component {
         });
 
         return(
-            <div id="section5">
+            <div id="organisations">
             
             <div className="section5_container">
 
@@ -84,11 +82,7 @@ class Organisations extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="numerki">
-                            <p className="numerek numerek_wybr">1</p>
-                            <p className="numerek">2</p>
-                            <p className="numerek">3</p>
-                        </div>
+                       
                     </div>
 
 
@@ -127,11 +121,7 @@ class Organisations extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="numerki">
-                            <p className="numerek">1</p>
-                            <p className="numerek numerek_wybr">2</p>
-                            <p className="numerek">3</p>
-                        </div>
+                        
                     </div>
 
 
@@ -169,11 +159,7 @@ class Organisations extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="numerki">
-                            <p className="numerek">1</p>
-                            <p className="numerek">2</p>
-                            <p className="numerek numerek_wybr">3</p>
-                        </div>
+                        
                     </div>
                 
                 </div>

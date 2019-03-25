@@ -4,7 +4,7 @@ import './AboutUs.scss';
 class AboutUs extends React.Component {
     render(){
         return(
-            <div id="section4">
+            <div id="about-us">
 
             <div className="section4_container">
 
