@@ -13,7 +13,9 @@ class Form extends React.Component {
             changeBackgroundColor: false,
             showFormFour: false,
             showFormFive: false,
-            showFormSix: false
+            showFormSix: false,
+
+            street: ''
         }    
     }
 
@@ -53,7 +55,9 @@ class Form extends React.Component {
         e.preventDefault();
         this.setState({
             showFormFour: !this.state.showFormFour,
-            showFormFive: !this.state.showFormFive
+            showFormFive: !this.state.showFormFive,
+
+            street: document.querySelector('#street').value
         })
     }
 
@@ -334,6 +338,42 @@ class Form extends React.Component {
                             </div>
 
                             <div className="form-part-4__title">Podaj adres oraz termin odbioru rzeczy przez kuriera</div>
+                            <div className="form-part-4__details">
+                                <div className="form-part-4__details-address">
+                                    <h1>Adres odbioru</h1>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="street">Ulica</label>
+                                        <input type="textarea" name="street" id="street" />
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label  htmlFor="city">Miasto</label>
+                                        <input type="textarea" name="city" id="city" />
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="postal-code">Kod pocztowy</label>
+                                        <input type="textarea" name="postal-code" id="postal-code" />
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="phone">Numer telefonu</label>
+                                        <input type="textarea" name="phone" id="phone" />
+                                    </div>  
+                                </div>
+                                <div className="form-part-4__details-date">
+                                    <h1>Termin odbioru</h1>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="date">Data</label>
+                                        <input type="textarea" name="date" id="date" />
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="hour">Godzina</label>
+                                        <input type="textarea" name="hour" id="hour" />
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="additional-info">Uwagi dla kuriera</label>
+                                        <input style={{height: "7em"}} type="textarea" name="additional-info" id="additional-info" />
+                                    </div> 
+                                </div>
+                            </div>
 
                             <div className="form-part-4__button-container">
                                 <button className="form-part-4__button" onClick={(e) => this.handleBackToThreeB(e)}>Wstecz</button>
@@ -350,6 +390,44 @@ class Form extends React.Component {
                         <div className="form-part-5">
 
                         <div className="form-part-5__title">Podsumowanie Twojej darowizny:</div>
+
+
+                        <div className="form-part-4__details">
+                                <div className="form-part-4__details-address">
+                                    <h1>Adres odbioru</h1>
+                                    <div className="form-part-4__item">
+                                        <div >Ulica: {this.state.street}</div>
+                                        {/* <input type="textarea" name="street" id="street-sum"></input> */}
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label  htmlFor="city">Miasto</label>
+                                        <input type="textarea" name="city" id="city-sum" />
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="postal-code">Kod pocztowy</label>
+                                        <input type="textarea" name="postal-code" id="postal-code-sum" />
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="phone">Numer telefonu</label>
+                                        <input type="textarea" name="phone" id="phone-sum" />
+                                    </div>  
+                                </div>
+                                <div className="form-part-4__details-date">
+                                    <h1>Termin odbioru</h1>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="date">Data</label>
+                                        <input type="textarea" name="date" id="date-sum" />
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="hour">Godzina</label>
+                                        <input type="textarea" name="hour" id="hour-sum" />
+                                    </div>
+                                    <div className="form-part-4__item">
+                                        <label htmlFor="additional-info">Uwagi dla kuriera</label>
+                                        <input style={{height: "7em"}} type="textarea" name="additional-info" id="additional-info-sum" />
+                                    </div> 
+                                </div>
+                            </div>
 
                         <div className="form-part-5__button-container">
                                 <button className="form-part-5__button" onClick={(e) => this.handleBackToFour(e)}>Wstecz</button>
