@@ -289,7 +289,6 @@
         outline:none;
     }   
     .information-container{
-        // border: 1px solid blue;
         text-align: left;
         margin-left: 11em;
         
@@ -305,84 +304,6 @@
         font-style: italic;
         margin-bottom: 1em;
     } 
-}
-
-//-----------------------------------------step 4/6
-
-.form-part-4-container{
-    display: none;
-}
-
-.show-form-4{
-    display: block !important;
-}
-
-.form-part-4{
-    display: flex;
-    flex-direction: column;
-    color: rgb(82, 80, 80);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    &__title{
-        padding-top:0.5em;
-        color:black;
-        font-weight:600;
-        font-size:2em;
-        margin: 1em 0;
-        padding-left:5em;
-    }   
-    &__button-container{
-        margin-left: 11em;
-        margin-bottom: 6em;
-    }  
-    &__button{
-        margin-right: 2em;
-        font-family: 'Open Sans', sans-serif;
-        width:8em;
-        height:4em;
-        color:rgb(82, 80, 80);
-        font-weight: 300;
-        font-size: 1em;
-        background-color: rgb(237,239,238);
-        border: 1px solid rgb(82, 80, 80);
-        padding: 5px 15px;
-        outline:none;
-    }   
-    h1{
-        font-size: 1em;
-        // margin-left: 10em;
-        color: black;
-        font-weight: 600;
-        margin-bottom: 3em;
-        margin-top: 2em;
-    }
-    &__details{
-        display: flex;
-        padding-left:10em;
-        padding-bottom:5em;
-    }
-    &__details-address{
-        display:flex;
-        flex-direction: column;
-        margin-right: 3em;
-    }
-    &__details-date{
-        display:flex;
-        flex-direction: column;
-    }
-    &__item{
-        width: 350px;
-        justify-content: space-between;
-        display: flex;
-        margin-bottom: 1em;
-        input{
-            outline: none;
-            width: 200px;
-            height: 2.5em;
-            border: 1px solid rgb(82, 80, 80);
-            background-color: rgb(237,239,238);
-        }
-    }
 }
 
 .form-container-3b{
@@ -442,6 +363,85 @@
     }
 }
 
+
+//-----------------------------------------step 4/6
+
+.form-part-4-container{
+    display: none;
+}
+
+.show-form-4{
+    display: block !important;
+}
+
+.form-part-4{
+    display: flex;
+    flex-direction: column;
+    color: rgb(82, 80, 80);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    &__title{
+        padding-top:0.5em;
+        color:black;
+        font-weight:600;
+        font-size:2em;
+        margin: 1em 0;
+        padding-left:5em;
+    }   
+    &__button-container{
+        margin-left: 11em;
+        margin-bottom: 6em;
+    }  
+    &__button{
+        margin-right: 2em;
+        font-family: 'Open Sans', sans-serif;
+        width:8em;
+        height:4em;
+        color:rgb(82, 80, 80);
+        font-weight: 300;
+        font-size: 1em;
+        background-color: rgb(237,239,238);
+        border: 1px solid rgb(82, 80, 80);
+        padding: 5px 15px;
+        outline:none;
+    }   
+    h1{
+        font-size: 1em;
+        color: black;
+        font-weight: 600;
+        margin-bottom: 3em;
+        margin-top: 2em;
+    }
+    &__details{
+        display: flex;
+        padding-left:10em;
+        padding-bottom:5em;
+    }
+    &__details-address{
+        display:flex;
+        flex-direction: column;
+        margin-right: 3em;
+    }
+    &__details-date{
+        display:flex;
+        flex-direction: column;
+    }
+    &__item{
+        width: 350px;
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: 1em;
+        input{
+            outline: none;
+            width: 200px;
+            height: 2.5em;
+            border: 1px solid rgb(82, 80, 80);
+            background-color: rgb(237,239,238);
+        }
+    }
+}
+
+
 // -------------------------------------------step 5/6
 
 .form-part-5-container{
@@ -483,6 +483,55 @@
         padding: 5px 15px;
         outline:none;
     }   
+    h1{
+        font-size: 1em;
+        color: black;
+        font-weight: 600;
+        margin-bottom: 3em;
+        margin-top: 2em;
+    }
+    &__details{
+        display: flex;
+        padding-left:10em;
+        padding-bottom:5em;
+        &--upper{
+            padding-left:10em;
+            padding-bottom:0;
+        }
+    }
+    &__details-address{
+        display:flex;
+        flex-direction: column;
+        margin-right: 3em;
+    }
+    &__details-date{
+        display:flex;
+        flex-direction: column;
+    }
+    &__details-summary{
+        display:flex;
+        flex-direction: column;
+        
+    }
+    &__item{
+        width: 350px;
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: 1em;
+        div{
+            outline: none;
+            width: 200px;
+            height: 2.5em;
+            font-weight: 600;
+        }
+    }   
+    &__summary{
+        margin-bottom:0;
+        div{
+            height: 2.5em;
+            font-weight: 600;
+        }
+    } 
 }
 
 //------------------------------------------step 6/6
@@ -501,30 +550,27 @@
     color: rgb(82, 80, 80);
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    padding-bottom:2em;
     &__title{
+        text-align: center;
         padding-top:0.5em;
-        color:black;
-        font-weight:600;
-        font-size:2em;
-        margin: 1em 0;
-        padding-left:5em;
+        font-size:1.8em;
+        margin-top:3em;
+        margin-bottom:1em;
     }   
-    &__button-container{
-        margin-left: 11em;
-        margin-bottom: 6em;
-    }  
-    &__button{
-        margin-right: 2em;
-        font-family: 'Open Sans', sans-serif;
-        width:8em;
-        height:4em;
-        color:rgb(82, 80, 80);
-        font-weight: 300;
-        font-size: 1em;
-        background-color: rgb(237,239,238);
-        border: 1px solid rgb(82, 80, 80);
-        padding: 5px 15px;
-        outline:none;
-    }   
+    &__decoration-container {
+        display: flex;
+        justify-content: center;
+        margin: 3em 0;
+    }
+    &__decoration {
+            background: url("./decoration.png");
+            height:20px;
+            width: 200px;
+            background-position: center;
+            background-size: cover;
+    }
 }
+    
+
 

@@ -15,7 +15,15 @@ class Form extends React.Component {
             showFormFive: false,
             showFormSix: false,
 
-            street: ''
+            street: '',
+            city: '',
+            postalCode: '',
+            phone: '',
+            date: '',
+            hour: '',
+            additionalInfo: '',
+
+            amountOfClothes: 0
         }    
     }
 
@@ -31,7 +39,9 @@ class Form extends React.Component {
         e.preventDefault();
         this.setState({
             showFormTwo: !this.state.showFormTwo,
-            showFormThreeA: !this.state.showFormThreeA
+            showFormThreeA: !this.state.showFormThreeA,
+
+            amountOfClothes: document.querySelector('#amountOfClothes').value,
         })
     }
 
@@ -57,7 +67,13 @@ class Form extends React.Component {
             showFormFour: !this.state.showFormFour,
             showFormFive: !this.state.showFormFive,
 
-            street: document.querySelector('#street').value
+            street: document.querySelector('#street').value,
+            city: document.querySelector('#city').value,
+            postalCode: document.querySelector('#postalCode').value,
+            phone: document.querySelector('#phone').value,
+            date: document.querySelector('#date').value,
+            hour: document.querySelector('#hour').value,
+            additionalInfo: document.querySelector('#additionalInfo').value,     
         })
     }
 
@@ -202,7 +218,7 @@ class Form extends React.Component {
 
                             <div>
                                 <label htmlFor="worki" className="select-label">Liczba 60 l worków:</label>
-                                <select name="worki" id="worki">
+                                <select name="worki" id="amountOfClothes">
                                     <option value="0">- wybierz -</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -258,7 +274,6 @@ class Form extends React.Component {
                                 <div className="form-part-3a__title--smaller">Komu chcesz pomóc?</div>
 
                                 <div className="form-part-3a__button-container--for-small-buttons">
-
                                     <button className={`form-part-3a__button--small-buttons ${changeBackgroundColor ? 'change-background-color-to-yellow' : ''}`} onClick={(e) => this.changeBackgroundColor(e)}>dzieciom</button>
                                     <button className={`form-part-3a__button--small-buttons ${changeBackgroundColor ? 'change-background-color-to-yellow' : ''}`} onClick={(e) => this.changeBackgroundColor(e)}>samotnym matkom</button>
                                     <button className="form-part-3a__button--small-buttons">bezdomnym</button>
@@ -351,7 +366,7 @@ class Form extends React.Component {
                                     </div>
                                     <div className="form-part-4__item">
                                         <label htmlFor="postal-code">Kod pocztowy</label>
-                                        <input type="textarea" name="postal-code" id="postal-code" />
+                                        <input type="textarea" name="postal-code" id="postalCode" />
                                     </div>
                                     <div className="form-part-4__item">
                                         <label htmlFor="phone">Numer telefonu</label>
@@ -370,7 +385,7 @@ class Form extends React.Component {
                                     </div>
                                     <div className="form-part-4__item">
                                         <label htmlFor="additional-info">Uwagi dla kuriera</label>
-                                        <input style={{height: "7em"}} type="textarea" name="additional-info" id="additional-info" />
+                                        <input style={{height: "7em"}} type="textarea" name="additional-info" id="additionalInfo" />
                                     </div> 
                                 </div>
                             </div>
@@ -391,40 +406,48 @@ class Form extends React.Component {
 
                         <div className="form-part-5__title">Podsumowanie Twojej darowizny:</div>
 
+                        <div className="form-part-5__details--upper">
+                            <div className="form-part-5__details-summary">
+                                <h1>Oddajesz:</h1>
+                                <div className="form-part-5__summary">
+                                    <div>{this.state.amountOfClothes} worki/ów rzeczy</div>
+                                </div>
+                            </div>
+                        </div>
 
-                        <div className="form-part-4__details">
-                                <div className="form-part-4__details-address">
+                        <div className="form-part-5__details">
+                                <div className="form-part-5__details-address">
                                     <h1>Adres odbioru</h1>
-                                    <div className="form-part-4__item">
-                                        <div >Ulica: {this.state.street}</div>
-                                        {/* <input type="textarea" name="street" id="street-sum"></input> */}
+                                    <div className="form-part-5__item">
+                                        <div>Ulica:</div>
+                                        <div>{this.state.street}</div>
                                     </div>
-                                    <div className="form-part-4__item">
-                                        <label  htmlFor="city">Miasto</label>
-                                        <input type="textarea" name="city" id="city-sum" />
+                                    <div className="form-part-5__item">
+                                        <div>Miasto:</div>
+                                        <div>{this.state.city}</div>
                                     </div>
-                                    <div className="form-part-4__item">
-                                        <label htmlFor="postal-code">Kod pocztowy</label>
-                                        <input type="textarea" name="postal-code" id="postal-code-sum" />
+                                    <div className="form-part-5__item">
+                                        <div>Kod pocztowy:</div>
+                                        <div>{this.state.postalCode}</div>
                                     </div>
-                                    <div className="form-part-4__item">
-                                        <label htmlFor="phone">Numer telefonu</label>
-                                        <input type="textarea" name="phone" id="phone-sum" />
+                                    <div className="form-part-5__item">
+                                        <div>Numer telefonu:</div>
+                                        <div>{this.state.phone}</div>
                                     </div>  
                                 </div>
-                                <div className="form-part-4__details-date">
+                                <div className="form-part-5__details-date">
                                     <h1>Termin odbioru</h1>
-                                    <div className="form-part-4__item">
-                                        <label htmlFor="date">Data</label>
-                                        <input type="textarea" name="date" id="date-sum" />
+                                    <div className="form-part-5__item">
+                                        <div>Data:</div>
+                                        <div>{this.state.date}</div>
                                     </div>
-                                    <div className="form-part-4__item">
-                                        <label htmlFor="hour">Godzina</label>
-                                        <input type="textarea" name="hour" id="hour-sum" />
+                                    <div className="form-part-5__item">
+                                        <div>Godzina:</div>
+                                        <div>{this.state.hour}</div>
                                     </div>
-                                    <div className="form-part-4__item">
-                                        <label htmlFor="additional-info">Uwagi dla kuriera</label>
-                                        <input style={{height: "7em"}} type="textarea" name="additional-info" id="additional-info-sum" />
+                                    <div className="form-part-5__item">
+                                        <div>Uwagi dla kuriera:</div>
+                                        <div>{this.state.additionalInfo}</div>
                                     </div> 
                                 </div>
                             </div>
@@ -441,10 +464,21 @@ class Form extends React.Component {
                     <div className={`form-part-6-container ${showFormSix ? 'show-form-6' : ''}`}>
 
                         <div className="form-part-6">
-                            Dziękujemy za przesłamie formularza. Na maila prześlemy wszelkie informacje o odbiorze.
-                        </div>
-                        <div>znaczek</div>
 
+                            <div className="form-part-6__title">
+                                <p>
+                                Dziękujemy za przesłanie formularza.
+                                </p>
+                                <p>
+                                Na maila prześlemy wszelkie informacje o odbiorze.
+                                </p>
+                            </div>
+
+                            <div className="form-part-6__decoration-container">
+                                <div className="form-part-6__decoration" />
+                            </div>
+
+                        </div>
                     </div>
 
                 </form>
