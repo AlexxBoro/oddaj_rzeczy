@@ -162,7 +162,7 @@ class Form extends React.Component {
 
                         <div className="header_pasek">
                             <p className="pasek_wazne">Ważne!</p>
-                            <p className="pasek_info">Uzupełnij szczegóły dotyczce twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
+                            <p className="pasek_info">Uzupełnij szczegóły dotyczące twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
                         </div>
 
                         <div className="form-part-one__title">Zaznacz co chcesz oddac:</div>
