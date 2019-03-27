@@ -3,3 +3,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## oddaj_rzeczy
 
 in progress... this is my first SPA and I know it is far from being perfect. I learn how to make it better every day and implement changes.
+
+
+[see on gh pages](https://alexxboro.github.io/oddaj_rzeczy/#/)
