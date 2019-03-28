@@ -40,7 +40,7 @@ class RegisterUser extends React.Component {
 
         <Navigation />
 
-        <div class="rej_form_container">
+        <div className="rej_form_container">
           <div className="rej_tytul">Załóż konto</div>
 
           <div className="znaczek_container_rej">

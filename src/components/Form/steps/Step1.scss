@@ -1,0 +1,35 @@
+.form-part-one {
+  flex-direction: column;
+  color: rgb(82, 80, 80);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+  &__title {
+    color: black;
+    font-weight: 600;
+    font-size: 2em;
+    margin: 1em 0;
+    padding-left: 5em;
+  }
+
+  &__item {
+    padding: 1em;
+    padding-left: 12em;
+  }
+
+  &__button {
+    margin-left: 1em;
+    margin: 1em 0;
+    font-family: 'Open Sans', sans-serif;
+    width: 8em;
+    height: 4em;
+    color: rgb(82, 80, 80);
+    font-weight: 300;
+    font-size: 1em;
+    background-color: rgb(237, 239, 238);
+    border: 1px solid rgb(82, 80, 80);
+    padding: 5px 15px;
+    outline: none;
+    margin-left: 12em;
+  }
+}

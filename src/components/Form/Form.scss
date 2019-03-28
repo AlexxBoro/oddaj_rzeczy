@@ -3,54 +3,9 @@
     width: 100vw;
 }
 
-.hide-element {
-    display: none !important;
-}
-
-.show-element {
-    display: block !important;
-}
-
-//-----------------------------step 1/6
-.form-part-one {
-    display: flex;
-    flex-direction: column;
-    color: rgb(82, 80, 80);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-
-    &__title {
-        color: black;
-        font-weight: 600;
-        font-size: 2em;
-        margin: 1em 0;
-        padding-left: 5em;
-    }
-
-    &__item {
-        padding: 1em;
-        padding-left: 12em;
-    }
-
-    &__button {
-        margin-left: 1em;
-        margin: 1em 0;
-        font-family: 'Open Sans', sans-serif;
-        width: 8em;
-        height: 4em;
-        color: rgb(82, 80, 80);
-        font-weight: 300;
-        font-size: 1em;
-        background-color: rgb(237, 239, 238);
-        border: 1px solid rgb(82, 80, 80);
-        padding: 5px 15px;
-        outline: none;
-        margin-left: 12em;
-    }
-}
 
 .form-container {
-    display: block;
+    display: flex;
     position: relative;
     padding-left: 35px;
     margin-bottom: 10px;
@@ -110,68 +65,6 @@
     }
 }
 
-//---------------------------------------step 2/6
-
-.form-part-two-container {
-    display: none;
-}
-
-.form-part-two {
-    display: flex;
-    flex-direction: column;
-    color: rgb(82, 80, 80);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-
-    &__title {
-        padding-top: 2em;
-        color: black;
-        font-weight: 600;
-        font-size: 2em;
-        margin: 1em 0;
-        padding-left: 5em;
-    }
-
-    &__item {
-        padding: 1em;
-        padding-left: 12em;
-    }
-
-    &__button-container {
-        margin-left: 10em;
-        margin-bottom: 6em;
-    }
-
-    &__button {
-        margin-right: 2em;
-        font-family: 'Open Sans', sans-serif;
-        width: 8em;
-        height: 4em;
-        color: rgb(82, 80, 80);
-        font-weight: 300;
-        font-size: 1em;
-        background-color: rgb(237, 239, 238);
-        border: 1px solid rgb(82, 80, 80);
-        padding: 5px 15px;
-        outline: none;
-
-    }
-
-    .select-label {
-        margin-left: 10em;
-        margin-right: 1em;
-    }
-
-    select {
-        width: 20em;
-        height: 3em;
-        background: none;
-        outline: none;
-        border-radius: 0;
-        margin-bottom: 5em;
-    }
-}
-
 //--------------------------------------------step3a/6
 
 .form-part-3a-container {
@@ -179,7 +72,7 @@
 }
 
 .form-part-3a {
-    display: flex;
+    display: none;
     flex-direction: column;
     color: rgb(82, 80, 80);
     font-family: 'Open Sans', sans-serif;
@@ -271,7 +164,7 @@
 }
 
 .form-part-3b {
-    display: flex;
+    display: none;
     flex-direction: column;
     color: rgb(82, 80, 80);
     font-family: 'Open Sans', sans-serif;
@@ -327,7 +220,7 @@
 }
 
 .form-container-3b {
-    display: block;
+    display: none;
     position: relative;
     padding-left: 35px;
     margin-bottom: -5px;
@@ -395,7 +288,7 @@
 }
 
 .form-part-4 {
-    display: flex;
+    display: none;
     flex-direction: column;
     color: rgb(82, 80, 80);
     font-family: 'Open Sans', sans-serif;
@@ -478,7 +371,7 @@
 }
 
 .form-part-5 {
-    display: flex;
+    display: none;
     flex-direction: column;
     color: rgb(82, 80, 80);
     font-family: 'Open Sans', sans-serif;
@@ -579,7 +472,7 @@
 }
 
 .form-part-6 {
-    display: flex;
+    display: none;
     flex-direction: column;
     color: rgb(82, 80, 80);
     font-family: 'Open Sans', sans-serif;
@@ -607,4 +500,8 @@
         background-position: center;
         background-size: cover;
     }
+}
+
+.show-element {
+    display: flex;
 }

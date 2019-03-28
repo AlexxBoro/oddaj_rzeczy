@@ -1,5 +1,6 @@
 // @media(){}
 
+// Staraj się nie używać ID - id jest problematyczne w przypadku przeładowywania klas (specyficzność)
 #contact {
     height: 100vh;
     width: 100vw;
@@ -11,7 +12,6 @@
     flex-direction: column;
     color: rgb(82, 80, 80);
 }
-
 
 // ogolny podzial calej sekcji 6 na flexie:
 .container1{
@@ -43,7 +43,7 @@
     height:20px;
     width: 200px;
     background-position: center;
-    background-size: cover; 
+    background-size: cover;
     margin-bottom: 0.5em;
 }
 form{
@@ -58,7 +58,7 @@ form{
     justify-content: center;
     align-content: center;
     text-align: center;
-   
+
 }
 .formularz_title{
     text-transform: uppercase;
@@ -116,7 +116,7 @@ form{
     border: 1px solid rgb(82, 80, 80);
     padding: 5px 15px;
     outline:none;
-   
+
 }
 .button-submit:hover{
     cursor: pointer;

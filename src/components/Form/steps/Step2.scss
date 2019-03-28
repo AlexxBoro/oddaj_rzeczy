@@ -1,0 +1,55 @@
+.form-part-two {
+  flex-direction: column;
+  color: rgb(82, 80, 80);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+  &__title {
+    padding-top: 2em;
+    color: black;
+    font-weight: 600;
+    font-size: 2em;
+    margin: 1em 0;
+    padding-left: 5em;
+  }
+
+  &__item {
+    padding: 1em;
+    padding-left: 12em;
+  }
+
+  &__button-container {
+    margin-left: 10em;
+    margin-bottom: 6em;
+  }
+
+  // Przenieś do globalnych!!! :D
+  &__button {
+    margin-right: 2em;
+    font-family: 'Open Sans', sans-serif;
+    width: 8em;
+    height: 4em;
+    color: rgb(82, 80, 80);
+    font-weight: 300;
+    font-size: 1em;
+    background-color: rgb(237, 239, 238);
+    border: 1px solid rgb(82, 80, 80);
+    padding: 5px 15px;
+    outline: none;
+
+  }
+
+  .select-label {
+    margin-left: 10em;
+    margin-right: 1em;
+  }
+
+  select {
+    width: 20em;
+    height: 3em;
+    background: none;
+    outline: none;
+    border-radius: 0;
+    margin-bottom: 5em;
+  }
+}

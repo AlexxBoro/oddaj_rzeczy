@@ -6,6 +6,9 @@ class AboutUs extends React.Component {
         return(
             <div id="about-us">
 
+            {/* Uspójnij class name-y - albo BEM albo kebab-case (bo CSS nie jest case-sensitive) */}
+            {/* Co do nazwy sekcji - polecam coś bardziej deksryptywnego - section4 -> about-us */}
+            {/* np. about-us__container */}
             <div className="section4_container">
 
                 <div className="text_container">
@@ -24,7 +27,7 @@ class AboutUs extends React.Component {
                 <div className="image_container"></div>
 
             </div>
-            
+
             </div>
         )
     }

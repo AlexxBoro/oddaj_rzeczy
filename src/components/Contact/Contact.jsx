@@ -2,12 +2,11 @@ import React from 'react';
 import './Contact.scss';
 
 class Contact extends React.Component {
-
     state = {
         name: '',
         email: '',
         message: ''
-    }
+    };
 
     onNameChange = event => {
         this.setState({
@@ -35,8 +34,9 @@ class Contact extends React.Component {
     // onChange -> twój handler -> setState -> stan się zmienił -> render (zawsze wołany na zmianie stanu / propsów)
 
     render() {
-        return(
-            <div id="contact">
+        return (
+            <div id="contact" class="contact">
+                {/* Unikaj numerów elementów w nazwach klas, jeśli nie są zawsze związane z kolejnością */}
 
                 <div className="container1">
                     <div className="subcont1"></div>
@@ -47,11 +47,14 @@ class Contact extends React.Component {
 
                         <form>
                             <div className="name_and_email">
-                                <input className="input_name" type="text" placeholder="Imię" value={this.state.name} onChange={this.onNameChange}></input>
-                                <input className="input_email" type="email" placeholder="Email" value={this.state.email} onChange={this.onEmailChange}></input><br></br>
+                                <input className="input_name" type="text" placeholder="Imię" value={this.state.name}
+                                       onChange={this.onNameChange}/>
+                                <input className="input_email" type="email" placeholder="Email" value={this.state.email}
+                                       onChange={this.onEmailChange}/><br></br>
                             </div>
                             <div className="message">
-                                <input className="input_message" type="text" placeholder="Wiadomość" value={this.state.message} onChange={this.onMessageChange}></input><br></br>
+                                <input className="input_message" type="text" placeholder="Wiadomość"
+                                       value={this.state.message} onChange={this.onMessageChange}/><br></br>
                             </div>
                             <div className="button">
                                 <button className="button-submit" onSubmit={this.onFormSubmit}>Wyslij</button>
