@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './components/Main';
+import {
+    HashRouter,
+    Route,
+  } from 'react-router-dom';
 
-import { HashRouter, Route, } from 'react-router-dom';
+import Main from './components/Main';
 import { pagingRoutes, routes } from "./routes";
 
 class App extends React.Component {
