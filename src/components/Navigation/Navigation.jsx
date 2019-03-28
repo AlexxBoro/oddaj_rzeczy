@@ -3,25 +3,28 @@ import "./Navigation.scss";
 import { HashLink as Link } from "react-router-hash-link";
 
 class Navigation extends React.Component {
-  showHiddenMenu = e => {
-    if (
-      document.querySelector("#hidden-menu").className === "nav-column-hidden"
-    ) {
-      document
-        .querySelector("#hidden-menu")
-        .classList.remove("nav-column-hidden");
-      document.querySelector("#hidden-menu").classList.add("nav-column-show");
-    } else if (
-      document.querySelector("#hidden-menu").className === "nav-column-show"
-    ) {
-      document
-        .querySelector("#hidden-menu")
-        .classList.remove("nav-column-show");
-      document.querySelector("#hidden-menu").classList.add("nav-column-hidden");
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      showHiddenMenu: false
+    };
+  }
+
+  showHiddenMenu = () => {
+    if (this.state.showHiddenMenu === false) {
+      this.setState({
+        showHiddenMenu: true
+      });
+    } else if (this.state.showHiddenMenu === true) {
+      this.setState({
+        showHiddenMenu: false
+      });
     }
   };
 
   render() {
+    const { showHiddenMenu } = this.state;
     const navigation = [
       { name: "O co chodzi?", id: "four-steps" },
       { name: "O nas", id: "about-us" },
@@ -40,10 +43,13 @@ class Navigation extends React.Component {
     return (
       <>
         <nav className="nav">{navigationMap}</nav>
-        <button onClick={this.showHiddenMenu} className="hamburger" />
-        <nav id="hidden-menu" className="nav-column-hidden">
-          {navigationMap}
-        </nav>
+        <button onClick={e => this.showHiddenMenu(e)} className="hamburger">
+          <nav id="hidden-menu" className={`nav-column-hidden ${showHiddenMenu ? 'nav-column-show': ''}`}>
+              {navigationMap}
+          </nav>
+        </button>
+        
+        
       </>
     );
   }
