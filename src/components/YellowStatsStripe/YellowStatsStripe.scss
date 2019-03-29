@@ -1,57 +1,90 @@
-// @media only screen and (max-width: 1000px) {
-//     #section2 {
-//       flex-direction: column;
-//     }
-
-//   }
-
-
-#section2 {
-    height: 300px;
-    width: 100vw;
+.stats-container {
     background-color: rgb(251, 206, 0);
     color: rgb(82, 80, 80);
     font-weight: 300;
     display: flex;
+    font-family: 'Open Sans', sans-serif;
+    padding: 2em 3em 2em 3em;
 
+    @media only screen and (max-width: 550px) {
+        flex-direction: column;
+    }
 }
 
-.stat {
-    margin-left: 6em;
-    margin-right: 6em;
-    margin-top: 1em;
-    margin-bottom: 2em;
+.stats {
     justify-content: center;
     display: flex;
     flex-direction: column;
-}
+    padding: 0 4em;
 
-.stats_numbers {
-    display: flex;
-    justify-content: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 4em;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-}
+    @media only screen and (min-width: 1281px) {
+        &__item {
+            display: flex;
+            justify-content: center;
+            padding: 0.4rem 0;
+            text-align: center;
 
-.stats_text {
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9em;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-}
+            &--number {
+                font-size: 4em;
+            }
 
-.stats_descr {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.8em;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    line-height: 1.3em;
+            &--text {
+                text-transform: uppercase;
+                font-size: 0.9em;
+            }
+
+            &--description {
+                font-size: 0.8em;
+                line-height: 1.3em;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 551px) and (max-width: 1280px) {
+        &__item {
+            display: flex;
+            justify-content: center;
+            padding: 0.3rem 0;
+            text-align: center;
+
+            &--number {
+                font-size: 3em;
+            }
+
+            &--text {
+                text-transform: uppercase;
+                font-size: 0.9em;
+            }
+
+            &--description {
+                font-size: 0.8em;
+                line-height: 1.3em;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 550px) {
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0.3rem 0;
+            text-align: center;
+
+            &--number {
+                font-size: 3em;
+            }
+
+            &--text {
+                text-transform: uppercase;
+                font-size: 0.9em;
+                line-height: 1.3em;
+                padding-bottom: 3em;
+            }
+
+            &--description {
+                display: none;
+            }
+        }
+    }
 }
