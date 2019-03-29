@@ -9,18 +9,6 @@ import Contact from "./Contact/Contact";
 
 class Main extends React.Component {
   state = {
-    section3_options: [
-      "Wybierz rzeczy",
-      "Spakuj je",
-      "Zdecyduj komu chcesz pomóc",
-      "Zamów kuriera"
-    ],
-    section3_descr: [
-      "ubrania, zabawki, sprzęt i inne",
-      "skorzystaj z worków na śmieci",
-      "wybierz zaufane miejsce",
-      "kurier przyjedzie w dogodnym terminie"
-    ],
     section5_org: [
       "Fundacjom",
       "Organizacjom pozarządowym",
@@ -32,16 +20,8 @@ class Main extends React.Component {
     return (
       <>
         <Header />
-
-        <YellowStatsStripe
-          stats_numbers={this.state.stats_numbers}
-          stats_text={this.state.stats_text}
-          stats_descr={this.state.stats_descr}
-        />
-        <FourSteps
-          section3_options={this.state.section3_options}
-          section3_descr={this.state.section3_descr}
-        />
+        <YellowStatsStripe />
+        <FourSteps />
         <AboutUs />
         <Organisations section5_org={this.state.section5_org} />
         <Contact />

@@ -1,95 +1,108 @@
-#four-steps {
-    height: 600px;
-    width: 100vw;
-    background-color: rgb(255,255,255);
+.four-steps {
+    background-color: rgb(255, 255, 255);
     display: flex;
     color: rgb(82, 80, 80);
 }
 
-.napis_sekcja3{
-    display: flex;   
-    font-size: 2em;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    line-height:1.3em;
-    font-weight: 300;
-    margin-bottom: 0.5em;
-}
-
-.znaczek_container_section3 {
+.four-steps-container {
+    padding: 4em 10em;
     display: flex;
-    margin-bottom:1.5em;
-}
-.znaczek_section3{
-    background: url("./decoration.png");
-    height:20px;
-    width: 200px;
-    background-position: center;
-    background-size: cover;
-    
-}
-
-
-.section3_container{
-    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-}
-
-.tab_sekcja3{
-    background-color: rgb(235,235,235);
-    display: flex;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    // margin-bottom:1em;
-}
-
-.hr_sekcja3{
-    width:4em;
-}
-
-
-.opcja_sekcja3{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    width:140px;
-    height:150px;
-    margin-left:3em;
-    margin-right:3em;
-}
-i{
-    padding-bottom:0.5em;
-}
-
-
-.zaloz_konto_sekcja3{
-    text-transform: uppercase;
-    width:230px;
-    padding: 1em;
-    margin: 1em;
-    margin-top:2em;
-    border: 1px solid black;
-    font-size: 1.5em;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    line-height:1.3em;
-    border-top: 1px solid rgb(66, 66, 66);
-    border-right: 1px solid rgb(66, 66, 66);
-    border-left: 1px solid rgb(134, 134, 134);
-    border-bottom: 1px solid rgb(134, 134, 134);
-}    
-.zaloz_konto_sekcja3:hover{
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    cursor: pointer;
-    color:black;
+    
+    &__title {
+        display: flex;
+        font-size: 2em;
+        text-align: center;
+        font-weight: 300;
+        padding-bottom: 1em;
+    }
+
+    &__decoration-container {
+        display: flex;
+        padding-bottom: 2em;
+    }
+
+    &__decoration {
+        background: url("./decoration.png");
+        height: 20px;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__boxes {
+        background-color: rgb(235, 235, 235);
+        display: flex;
+        padding-top: 3em;
+        padding-bottom: 4em;
+    }
+
+    &__box {
+        font-weight: 300;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    i {
+        padding-bottom: 1rem;
+    }
+
+    h1 {
+        padding-bottom: 2em;
+    }
+
+
+    @media only screen and (min-width: 551px) and (max-width: 1280px) {
+        padding: 4em 2em;
+
+        p {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 550px) {
+        padding: 4em 2em;
+
+        &__boxes {
+            flex-direction: column;
+        }
+
+        i {
+            padding-top: 2rem;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    &__account-button {
+        text-transform: uppercase;
+        padding: 1.5em 2em;
+        margin-top: 2em;
+        border: 1px solid black;
+        font-size: 1.5em;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        border-top: 1px solid rgb(66, 66, 66);
+        border-right: 1px solid rgb(66, 66, 66);
+        border-left: 1px solid rgb(134, 134, 134);
+        border-bottom: 1px solid rgb(134, 134, 134);
+        text-decoration: "none";
+        color: "rgb(82, 80, 80)";
+    }
+
+    &__account-button:hover {
+        border: 1px solid black;
+        cursor: pointer;
+        color: black;
+    }
 }

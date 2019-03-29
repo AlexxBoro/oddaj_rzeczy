@@ -11,12 +11,12 @@ class App extends React.Component {
   render() {
     return (
       <HashRouter>
-        <div>
+        <>
           <Route exact path="/" component={Main} />
           <Route path="/register" component={RegisterUser} />
           <Route path="/login" component={LoginUser} />
           <Route path="/form" component={FormGeneral} />
-        </div>
+        </>
       </HashRouter>
     );
   }
