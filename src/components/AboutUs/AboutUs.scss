@@ -1,65 +1,75 @@
-#about-us {
-    height: 100vh;
-    width: 100vw;
+.about-us {
     background-color: rgb(239, 239, 239);
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(82, 80, 80);
+
+    .about-us-container {
+        display: flex;
+        padding: 1em 0;
+    }
+
+    .about-us-text {
+        padding: 10em 0;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__title {
+            font-size: 2em;
+            line-height: 1.3em;
+            font-weight: 300;
+            padding-bottom: 0.5em;
+        }
+
+        &__text {
+            display: flex;
+            text-align: center;
+            width: 60%;
+            font-size: 1.3em;
+            font-weight: 300;
+            line-height: 1.5em;
+        }
+    }
+
+    &__decoration-container {
+        display: flex;
+        padding-bottom: 2em;
+    }
+
+    &__decoration {
+        background: url("./decoration.png");
+        height: 20px;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__image {
+        background: url('./about.jpg');
+        background-size: cover;
+        width: 50vw;
+
+    }
 }
 
-.section4_container{
-    display: flex;
-    height:90vh;
-}
+@media only screen and (max-width: 1280px) {
+    .about-us-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1em 0;
+    }
 
-.image_container{
-    background: url('./about.jpg');
-    background-size:cover;
-    width:50vw;
-}
+    .about-us .about-us-text {
+        width: 100%;
+        padding: 4em 0;
+    }
 
-
-.znaczek_container_section4 {
-    display: flex;
-    margin-bottom:1.5em;
-}
-.znaczek_section4{
-    background: url("./decoration.png");
-    height:20px;
-    width: 200px;
-    background-position: center;
-    background-size: cover;
-}
-
-
-//text container:
-
-.section4_tytul{
-    font-size: 2em;
-    font-family: 'Open Sans', sans-serif;
-    line-height:1.3em;
-    font-weight: 300;
-    margin-bottom: 0.5em;
-}
-
-.text_container{
-    width:50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section4_text{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-.section4_text p{
-    width:60%;
-    font-size: 1.3em;
-    font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.5em;
+    .about-us__image {
+        display: none;
+    }
 }
