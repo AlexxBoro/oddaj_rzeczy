@@ -8,14 +8,6 @@ import Organisations from "./Organisations/Organisations";
 import Contact from "./Contact/Contact";
 
 class Main extends React.Component {
-  state = {
-    section5_org: [
-      "Fundacjom",
-      "Organizacjom pozarządowym",
-      "Lokalnym zbiórkom"
-    ]
-  };
-
   render() {
     return (
       <>
@@ -23,7 +15,7 @@ class Main extends React.Component {
         <YellowStatsStripe />
         <FourSteps />
         <AboutUs />
-        <Organisations section5_org={this.state.section5_org} />
+        <Organisations />
         <Contact />
       </>
     );

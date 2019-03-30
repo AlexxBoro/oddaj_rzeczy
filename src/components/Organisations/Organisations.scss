@@ -1,32 +1,6 @@
-// @media only screen and (max-width: 1000px) {
-//     .section5_container {
-//       display: none !important; 
-//       background-color: yellow;
-//     }
-//     #section5{
-//         display: none !important; 
-//         background-color: yellow;
-//     }
-//   }
 
-// $tablet-width: 768px;
-// @mixin tablet {
-//   @media (min-width: #{$tablet-width}) {
-//    @content;
-//   }
-// }
-// #section5 {
-//   margin: 0 auto;
-//   @include tablet {
-//    display: none !important;
-//   }
-// }
-
-#organisations {
-    height: 100vh;
-    width: 100vw;
+.organisations {
     background-color: rgb(255, 255, 255);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,6 +85,9 @@
 
 .hidden {
     display: none;
+}
+.visible{
+    display: block;
 }
 
 .border {
