@@ -80,11 +80,19 @@ class Contact extends React.Component {
         </div>
 
         <div className="footer">
-          <p className="footer__signature">Lorem ipsum lorem ipsum lorem lorem.</p>
+          <p className="footer__signature">
+            Lorem ipsum lorem ipsum lorem lorem.
+          </p>
           <div className="footer__logos">
-            <a href="https://www.facebook.com/" target="blank"><i className="fab fa-facebook fa-2x footer__icon" /></a>
-            <a href="https://twitter.com/?lang=en" target="blank"><i className="fab fa-twitter-square fa-2x footer__icon" /></a>
-            <a href="https://www.linkedin.com/" target="blank"><i className="fab fa-linkedin fa-2x footer__icon" /></a>
+            <a href="https://www.facebook.com/" target="blank">
+              <i className="fab fa-facebook fa-2x footer__icon" />
+            </a>
+            <a href="https://twitter.com/?lang=en" target="blank">
+              <i className="fab fa-twitter-square fa-2x footer__icon" />
+            </a>
+            <a href="https://www.linkedin.com/" target="blank">
+              <i className="fab fa-linkedin fa-2x footer__icon" />
+            </a>
           </div>
         </div>
       </div>

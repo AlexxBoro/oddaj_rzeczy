@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1281px){
+@media only screen and (min-width: 1281px) {
     .contact {
         background: url('./footer_bg_img.jpg');
         background-repeat: no-repeat;
@@ -8,14 +8,14 @@
         flex-direction: column;
         color: rgb(82, 80, 80);
         font-family: 'Open Sans', sans-serif;
-    
+
         &__form-container {
             display: flex;
             justify-content: flex-end;
             padding-top: 8em;
             padding-bottom: 10em;
         }
-    
+
         &__form {
             padding-right: 8em;
             padding-top: 6em;
@@ -23,14 +23,14 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-    
+
             &__title {
                 font-size: 2em;
                 line-height: 1.3em;
                 font-weight: 300;
                 margin-bottom: 0.5em;
             }
-    
+
             &__decoration {
                 background: url("./decoration.png");
                 height: 20px;
@@ -39,7 +39,7 @@
                 background-size: cover;
                 margin-bottom: 0.5em;
             }
-    
+
             &__subtitle {
                 text-transform: uppercase;
                 font-size: 0.7em;
@@ -47,14 +47,14 @@
                 padding-bottom: 2em;
             }
         }
-    
+
         .contact-form {
             display: flex;
             flex-direction: column;
-    
+
             &__name-and-email {
                 display: flex;
-    
+
                 &--name {
                     border: none;
                     border-bottom: 1px solid rgb(82, 80, 80);
@@ -66,7 +66,7 @@
                     font-weight: 300;
                     outline: none;
                 }
-    
+
                 &--email {
                     border: none;
                     border-bottom: 1px solid rgb(82, 80, 80);
@@ -79,7 +79,7 @@
                     outline: none;
                 }
             }
-    
+
             &__message {
                 border: none;
                 border-bottom: 1px solid rgb(82, 80, 80);
@@ -92,13 +92,13 @@
                 width: 330px;
                 outline: none;
             }
-    
+
             &__button-container {
                 margin-top: 30px;
                 justify-content: center;
                 align-content: center;
                 text-align: center;
-    
+
                 &__button {
                     color: rgb(82, 80, 80);
                     font-weight: 300;
@@ -108,7 +108,7 @@
                     padding: 5px 15px;
                     outline: none;
                 }
-    
+
                 &__button:hover {
                     cursor: pointer;
                     border: 1px solid black;
@@ -116,11 +116,11 @@
                 }
             }
         }
-    
+
         .footer {
             display: flex;
             flex-direction: row;
-    
+
             &__signature {
                 width: 80%;
                 color: rgb(82, 80, 80);
@@ -128,11 +128,11 @@
                 padding-right: 20em;
                 padding-top: 10px;
             }
-    
+
             &__logos {
                 width: 20%;
             }
-    
+
             &__icon {
                 color: rgb(82, 80, 80);
                 padding-left: 5px;
@@ -145,33 +145,33 @@
 }
 
 
-@media only screen and (min-width: 200px) and (max-width: 1280px){
+@media only screen and (min-width: 200px) and (max-width: 1280px) {
     .contact {
         background-color: rgb(237, 239, 238);
         display: flex;
         flex-direction: column;
         color: rgb(82, 80, 80);
         font-family: 'Open Sans', sans-serif;
-    
+
         &__form-container {
             display: flex;
             justify-content: center;
             padding-top: 3em;
             padding-bottom: 3em;
         }
-    
+
         &__form {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-    
+
             &__title {
                 font-size: 2em;
                 font-weight: 300;
                 margin-bottom: 1em;
             }
-    
+
             &__decoration {
                 background: url("./decoration.png");
                 height: 20px;
@@ -180,7 +180,7 @@
                 background-size: cover;
                 margin-bottom: 1em;
             }
-    
+
             &__subtitle {
                 text-transform: uppercase;
                 font-size: 0.7em;
@@ -188,14 +188,14 @@
                 padding-bottom: 2em;
             }
         }
-    
+
         .contact-form {
             display: flex;
             flex-direction: column;
-    
+
             &__name-and-email {
                 display: flex;
-    
+
                 &--name {
                     border: none;
                     border-bottom: 1px solid rgb(82, 80, 80);
@@ -207,7 +207,7 @@
                     font-weight: 300;
                     outline: none;
                 }
-    
+
                 &--email {
                     border: none;
                     border-bottom: 1px solid rgb(82, 80, 80);
@@ -220,7 +220,7 @@
                     outline: none;
                 }
             }
-    
+
             &__message {
                 border: none;
                 border-bottom: 1px solid rgb(82, 80, 80);
@@ -233,13 +233,13 @@
                 width: 330px;
                 outline: none;
             }
-    
+
             &__button-container {
                 margin-top: 30px;
                 justify-content: center;
                 align-content: center;
                 text-align: center;
-    
+
                 &__button {
                     color: rgb(82, 80, 80);
                     font-weight: 600;
@@ -251,22 +251,23 @@
                 }
             }
         }
-    
+
         .footer {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-    
+
             &__signature {
                 color: rgb(82, 80, 80);
-                text-align: right;
+                text-align: left;
                 padding-top: 10px;
+                font-weight: 300;
             }
-    
+
             &__logos {
                 display: flex;
             }
-    
+
             &__icon {
                 color: rgb(82, 80, 80);
                 padding-left: 5px;

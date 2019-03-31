@@ -1,14 +1,12 @@
 import React from "react";
-// import {Link} from 'react-router-dom';
-import "./LoginUser.scss";
+import { Link } from "react-router-dom";
+import "../RegisterUser/RegisterUser.scss";
 import LogBar from "../LogBar/LogBar";
-import Navigation from "../Navigation/Navigation";
 
 class LoginUser extends React.Component {
   state = {
     email: "",
-    password: "",
-    repeat_password: ""
+    password: ""
   };
 
   onEmailChange = event => {
@@ -24,7 +22,7 @@ class LoginUser extends React.Component {
   };
 
   onFormSubmit = event => {
-    event.preventDefault();
+    event.preventDefault(event);
   };
 
   render() {
@@ -32,19 +30,21 @@ class LoginUser extends React.Component {
       <>
         <LogBar />
 
-        <Navigation />
+        <Link to="/" className="register-form-back-to-main-page">
+          Powrót na stronę główną
+        </Link>
 
-        <div class="rej_form_container">
-          <div className="rej_tytul">Zaloguj się</div>
+        <div class="register-form-container">
+          <div className="register-form-container__title">Zaloguj się</div>
 
-          <div className="znaczek_container_rej">
-            <div className="znaczek_rej" />
+          <div className="register-form-container__decoration-container">
+            <div className="register-form-container__decoration" />
           </div>
 
           <form>
             <div>
               <input
-                className="input_form_rej"
+                className="register-form-container__input"
                 type="email"
                 placeholder="Email"
                 value={this.state.email}
@@ -53,7 +53,7 @@ class LoginUser extends React.Component {
             </div>
             <div>
               <input
-                className="input_form_rej"
+                className="register-form-container__input"
                 type="password"
                 placeholder="Hasło"
                 value={this.state.password}
@@ -61,13 +61,8 @@ class LoginUser extends React.Component {
               />
             </div>
             <div>
-              <div className="button_rej">
-                <button
-                  style={{ backgroundColor: "white", color: "rgb(82, 80, 80)" }}
-                  onSubmit={this.onFormSubmit}
-                >
-                  Zaloguj się
-                </button>
+              <div className="register-form-container__button">
+                <button onSubmit={this.onFormSubmit}>Zaloguj się</button>
               </div>
             </div>
           </form>

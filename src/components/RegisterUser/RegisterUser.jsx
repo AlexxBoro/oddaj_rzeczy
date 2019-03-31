@@ -1,14 +1,13 @@
 import React from "react";
-// import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./RegisterUser.scss";
 import LogBar from "../LogBar/LogBar";
-import Navigation from "../Navigation/Navigation";
 
 class RegisterUser extends React.Component {
   state = {
     email: "",
     password: "",
-    repeat_password: ""
+    repeatPassword: ""
   };
 
   onEmailChange = event => {
@@ -25,12 +24,12 @@ class RegisterUser extends React.Component {
 
   onRepeatPasswordChange = event => {
     this.setState({
-      repeat_password: event.target.value
+      repeatPassword: event.target.value
     });
   };
 
   onFormSubmit = event => {
-    event.preventDefault();
+    event.preventDefault(event);
   };
 
   render() {
@@ -38,19 +37,21 @@ class RegisterUser extends React.Component {
       <>
         <LogBar />
 
-        <Navigation />
+        <Link to="/" className="register-form-back-to-main-page">
+          Powrót na stronę główną
+        </Link>
 
-        <div class="rej_form_container">
-          <div className="rej_tytul">Załóż konto</div>
+        <div class="register-form-container">
+          <div className="register-form-container__title">Załóż konto</div>
 
-          <div className="znaczek_container_rej">
-            <div className="znaczek_rej" />
+          <div className="register-form-container__decoration-container">
+            <div className="register-form-container__decoration" />
           </div>
 
           <form>
             <div>
               <input
-                className="input_form_rej"
+                className="register-form-container__input"
                 type="email"
                 placeholder="Email"
                 value={this.state.email}
@@ -59,7 +60,7 @@ class RegisterUser extends React.Component {
             </div>
             <div>
               <input
-                className="input_form_rej"
+                className="register-form-container__input"
                 type="password"
                 placeholder="Hasło"
                 value={this.state.password}
@@ -68,21 +69,16 @@ class RegisterUser extends React.Component {
             </div>
             <div>
               <input
-                className="input_form_rej"
+                className="register-form-container__input"
                 type="password"
                 placeholder="Powtórz hasło"
-                value={this.state.repeat_password}
+                value={this.state.repeatPassword}
                 onChange={this.onRepeatPasswordChange}
               />
             </div>
             <div>
-              <div className="button_rej">
-                <button
-                  style={{ backgroundColor: "white", color: "rgb(82, 80, 80)" }}
-                  onSubmit={this.onFormSubmit}
-                >
-                  Załóż konto
-                </button>
+              <div className="register-form-container__button">
+                <button onSubmit={this.onFormSubmit}>Załóż konto</button>
               </div>
             </div>
           </form>
