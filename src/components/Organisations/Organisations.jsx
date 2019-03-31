@@ -2,79 +2,55 @@ import React from "react";
 import "./Organisations.scss";
 
 class Organisations extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      fundationsAndLocalAreHidden: false
-    };
-  }
-
-  // handleClick = e => {
-  //   if (e.target.innerText === "Fundacjom") {
-  //     document.querySelector("#fundacje").classList.remove("hidden");
-  //     document.querySelector("#pozarzadowe").classList.add("hidden");
-  //     document.querySelector("#lokalne").classList.add("hidden");
-  //   } else if (e.target.innerText === "Organizacjom pozarządowym") {
-  //     document.querySelector("#fundacje").classList.add("hidden");
-  //     document.querySelector("#pozarzadowe").classList.remove("hidden");
-  //     document.querySelector("#lokalne").classList.add("hidden");
-  //   } else if (e.target.innerText === "Lokalnym zbiórkom") {
-  //     document.querySelector("#fundacje").classList.add("hidden");
-  //     document.querySelector("#pozarzadowe").classList.add("hidden");
-  //     document.querySelector("#lokalne").classList.remove("hidden");
-  //   }
-  // };
-
-  handleClickOrganisations(e) {
-    this.setState({
-      fundationsAndLocalAreHidden: !this.state.fundationsAndLocalAreHidden
-    });
-  }
+  handleClick = e => {
+    if (e.target.innerText === "Fundacjom") {
+      document.querySelector("#fundacje").classList.remove("hidden");
+      document.querySelector("#pozarzadowe").classList.add("hidden");
+      document.querySelector("#lokalne").classList.add("hidden");
+    } else if (e.target.innerText === "Organizacjom pozarządowym") {
+      document.querySelector("#fundacje").classList.add("hidden");
+      document.querySelector("#pozarzadowe").classList.remove("hidden");
+      document.querySelector("#lokalne").classList.add("hidden");
+    } else if (e.target.innerText === "Lokalnym zbiórkom") {
+      document.querySelector("#fundacje").classList.add("hidden");
+      document.querySelector("#pozarzadowe").classList.add("hidden");
+      document.querySelector("#lokalne").classList.remove("hidden");
+    }
+  };
 
   render() {
-    const { fundationsAndLocalAreHidden } = this.state;
-    // const organisations = ["Fundacjom", "Organizacjom pozarządowym", "Lokalnym zbiórkom"]
+    const organisations = [
+      "Fundacjom",
+      "Organizacjom pozarządowym",
+      "Lokalnym zbiórkom"
+    ];
 
-    // const orgs = organisations.map((e, i) => {
-    //   return (
-    //     <div onClick={this.handleClick} className="opcja_section5" key={i}>
-    //       {e}
-    //     </div>
-    //   );
-    // });
+    const orgs = organisations.map((e, i) => {
+      return (
+        <div onClick={this.handleClick} className="organisations__options-container__option" key={i}>
+          {e}
+        </div>
+      );
+    });
 
     return (
-      
-
       <div id="organisations" className="organisations">
 
-        <div className="section5_container">
-          <div className="title_section5">Komu pomagamy?</div>
+          <div className="organisations__title">Komu pomagamy?</div>
 
-          <div className="znaczek_section5" />
+          <div className="organisations__decoration" />
 
-          <div className="opcje_section5">
-              <div onClick={this.handleClickFundations} className="opcja_section5">
-              Fundacjom
-            </div>
-            <div onClick={e => this.handleClickOrganisations(e)} className="opcja_section5">
-              Organizacjom pozarządowym
-            </div>
-            <div onClick={e => this.handleClickLocal(e)} className="opcja_section5">
-              Lokalnym zbiórkom
-            </div>
-          </div>
+          <div className="organisations__options-container">{orgs}</div>
 
-          <div className="text_section5">
+          <div className="organisations__text">
             W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
             współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i
             czego potrzebują.
           </div>
 
-          <div className="organizacje" >
-            <div id="fundacje" className={`${fundationsAndLocalAreHidden ? 'hidden' : '' }`}>
-              <div className="informacje">
+
+            <div id="fundacje">
+              <div className="organisations__information-container">
                 <div className="informacje1">
                   <div className="informacje1_kontenerek">
                     <p className="nazwa_org">Fundacja "Dbam o Zdrowie"</p>
@@ -123,8 +99,8 @@ class Organisations extends React.Component {
               </div>
             </div>
 
-            <div id="pozarzadowe" className="hidden" className={`${fundationsAndLocalAreHidden ? '' : 'visible' }`}>
-              <div className="informacje">
+            <div id="pozarzadowe" className="hidden">
+              <div className="organisations__information-container">
                 <div className="informacje1">
                   <div className="informacje1_kontenerek">
                     <p className="nazwa_org">Organizacja 1</p>
@@ -169,8 +145,8 @@ class Organisations extends React.Component {
               </div>
             </div>
 
-            <div id="lokalne" className="hidden" >
-              <div className="informacje">
+            <div id="lokalne" className="hidden">
+              <div className="organisations__information-container">
                 <div className="informacje1">
                   <div className="informacje1_kontenerek">
                     <p className="nazwa_org">Lokalna zbiórka 1</p>
@@ -214,9 +190,8 @@ class Organisations extends React.Component {
                 </div>
               </div>
             </div>
+
           </div>
-        </div>
-      </div>
     );
   }
 }

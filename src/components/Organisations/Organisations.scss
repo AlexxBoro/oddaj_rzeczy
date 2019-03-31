@@ -1,107 +1,62 @@
-
 .organisations {
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(82, 80, 80);
-}
-
-.section5_container {
-    width: 80vw;
-    height: 100vh;
-    display: flex;
+    font-family: 'Open Sans', sans-serif;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 5em;
-}
-
-.title_section5 {
-    font-size: 2em;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.3em;
     font-weight: 300;
-    margin-bottom: 0.5em;
+    &__title{
+        font-size: 2em;
+        line-height: 1.3em;
+        padding: 1em 0;
+    }
+    &__decoration{
+        background: url("./decoration.png");
+        height: 20px;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0.5em;
+    }
+    &__options-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 0;
+        &__option{
+            border: 1px solid white;
+            padding: 1em 2em;
+        }
+        &__option:hover{
+            border: 1px solid black;
+            color: black;
+            cursor: pointer;
+        }
+    }
+    &__text{
+        width: 40%;
+        line-height: 1.5em;
+        text-align: center;
+        padding: 2em 0;
+    }
+    &__information-container{
+        display: flex;
+        font-weight: 300;
+        border: 1px solid green;
+        padding: 3em 0;
+    }
 }
 
-.znaczek_section5 {
-    background: url("./decoration.png");
-    height: 20px;
-    width: 200px;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 0.5em;
-}
-
-
-.opcje_section5 {
-    display: flex;
-    font-family: 'Open Sans', sans-serif;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.opcja_section5 {
-    border: 1px solid white;
-    font-size: 1em;
-    flex-wrap: wrap;
-    width: 30%;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    line-height: 1.2em;
-}
-
-.opcja_section5:hover {
-    border: 1px solid black;
-    color: black;
-    cursor: pointer;
-}
-
-
-
-
-.text_section5 {
-    width: 40%;
-    font-size: 1em;
-    font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.5em;
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-.organizacje {
-    // border: 1px solid black;
-    padding: 1em;
-}
 
 .hidden {
     display: none;
 }
-.visible{
-    display: block;
-}
 
-.border {
-    border: 1px solid black;
-}
 
-.informacje {
-    display: flex;
-    font-weight: 300;
-
-}
 
 .informacje1 {
-    // border: 1px solid blue;
+    border: 1px solid blue;
     text-align: left;
 }
 
@@ -125,7 +80,7 @@ hr {
 
 
 .informacje2 {
-    // border: 1px solid blue;
+    border: 1px solid yellow;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
