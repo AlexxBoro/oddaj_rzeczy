@@ -7,12 +7,14 @@
     font-family: 'Open Sans', sans-serif;
     flex-direction: column;
     font-weight: 300;
-    &__title{
+
+    &__title {
         font-size: 2em;
         line-height: 1.3em;
         padding: 1em 0;
     }
-    &__decoration{
+
+    &__decoration {
         background: url("./decoration.png");
         height: 20px;
         width: 200px;
@@ -20,79 +22,137 @@
         background-size: cover;
         margin-bottom: 0.5em;
     }
-    &__options-container{
+
+    &__options-container {
         display: flex;
         justify-content: space-between;
         padding: 1em 0;
-        &__option{
+
+        &__option {
             border: 1px solid white;
             padding: 1em 2em;
         }
-        &__option:hover{
+
+        &__option:hover {
             border: 1px solid black;
             color: black;
             cursor: pointer;
         }
     }
-    &__text{
+
+    &__text {
         width: 40%;
         line-height: 1.5em;
         text-align: center;
         padding: 2em 0;
     }
-    &__information-container{
+
+    &__information-container {
         display: flex;
         font-weight: 300;
-        border: 1px solid green;
         padding: 3em 0;
     }
-}
 
+    &__names {
+        text-align: left;
+
+        &--title {
+            font-size: 1.3em;
+        }
+
+        &--purpose {
+            font-style: italic;
+            margin-bottom: 1em;
+        }
+    }
+
+    &__articles {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 4em;
+
+        p {
+            margin-bottom: 1.5em;
+            margin-top: 0.5em;
+            text-align: right;
+        }
+    }
+
+    hr {
+        width: 26em;
+        margin-bottom: 1.5em;
+    }
+}
 
 .hidden {
     display: none;
 }
 
+@media only screen and (min-width: 551px) and (max-width: 1280px) {
+    .organisations {
+        &__options-container {
+            &__option {
+                padding: 1em 0.5em;
+                text-align: center;
+            }
+        }
 
-
-.informacje1 {
-    border: 1px solid blue;
-    text-align: left;
+        &__articles {
+            display: none;
+        }
+    }
 }
 
-.informacje1_kontenerek {
-    // border:1px solid black;
-}
+@media only screen and (max-width: 550px) {
+    .organisations {
+        &__options-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 0;
 
-hr {
-    width: 26em;
-    margin-bottom: 1.5em;
-}
+            &__option {
+                border: 1px solid white;
+                padding: 1em 0.5em;
+                text-align: center;
+            }
+        }
 
-.nazwa_org {
-    font-size: 1.3em;
-}
+        &__text {
+            width: 70%;
+            line-height: 1.5em;
+            text-align: center;
+            padding: 1em 0;
+        }
 
-.cel_org {
-    font-style: italic;
-    margin-bottom: 1em;
-}
+        &__information-container {
+            display: flex;
+            font-weight: 300;
+            padding: 2em 0;
+        }
 
+        &__names {
+            text-align: left;
+            padding: 0 0.5em;
 
-.informacje2 {
-    border: 1px solid yellow;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+            &--title {
+                font-size: 1.1em;
+                font-weight: 600;
+            }
 
-.informacje2_kontenerek {
-    // border:1px solid black;
-    margin-left: 4em;
-}
+            &--purpose {
+                font-style: italic;
+                margin-bottom: 1em;
+            }
+        }
 
-.informacje2_artykuly {
-    margin-bottom: 1.5em;
-    margin-top: 0.5em;
-    text-align: right;
+        &__articles {
+            display: none;
+        }
+
+        hr {
+            width: 20em;
+            margin-bottom: 1.5em;
+        }
+    }
 }

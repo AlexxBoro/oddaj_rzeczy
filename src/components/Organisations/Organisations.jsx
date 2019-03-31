@@ -27,7 +27,11 @@ class Organisations extends React.Component {
 
     const orgs = organisations.map((e, i) => {
       return (
-        <div onClick={this.handleClick} className="organisations__options-container__option" key={i}>
+        <div
+          onClick={this.handleClick}
+          className="organisations__options-container__option"
+          key={i}
+        >
           {e}
         </div>
       );
@@ -35,163 +39,130 @@ class Organisations extends React.Component {
 
     return (
       <div id="organisations" className="organisations">
+        <div className="organisations__title">Komu pomagamy?</div>
 
-          <div className="organisations__title">Komu pomagamy?</div>
+        <div className="organisations__decoration" />
 
-          <div className="organisations__decoration" />
+        <div className="organisations__options-container">{orgs}</div>
 
-          <div className="organisations__options-container">{orgs}</div>
+        <div className="organisations__text">
+          W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
+          współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i
+          czego potrzebują.
+        </div>
 
-          <div className="organisations__text">
-            W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
-            współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i
-            czego potrzebują.
+        <div id="fundacje">
+          <div className="organisations__information-container">
+            <div className="organisations__names">
+              <p className="organisations__names--title">
+                Fundacja "Dbam o Zdrowie"
+              </p>
+              <p className="organisations__names--purpose">
+                Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji
+                życiowej.
+              </p>
+              <hr align="left" />
+
+              <p className="organisations__names--title">
+                Fundacja "Dla dzieci"
+              </p>
+              <p className="organisations__names--purpose">
+                Cel i misja: Pomoc dzieciom z ubogich rodzin.
+              </p>
+              <hr align="left" />
+
+              <p className="organisations__names--title">Fundacja "Bez domu"</p>
+              <p className="organisations__names--purpose">
+                Cel i misja: Pomoc dla osób nie posiadających miejsca
+                zamieszkania.
+              </p>
+              <hr align="left" />
+            </div>
+            <div className="organisations__articles">
+              <p>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+              <hr />
+
+              <p>ubrania, meble, zabawki</p>
+              <hr />
+
+              <p>ubrania, jedzenie, ciepłe koce</p>
+              <hr />
+            </div>
           </div>
+        </div>
 
+        <div id="pozarzadowe" className="hidden">
+          <div className="organisations__information-container">
+            <div className="organisations__names">
+              <p className="organisations__names--title">Organizacja 1</p>
+              <p className="organisations__names--purpose">
+                Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji
+                życiowej.
+              </p>
+              <hr align="left" />
 
-            <div id="fundacje">
-              <div className="organisations__information-container">
-                <div className="informacje1">
-                  <div className="informacje1_kontenerek">
-                    <p className="nazwa_org">Fundacja "Dbam o Zdrowie"</p>
-                    <p className="cel_org">
-                      Cel i misja: Pomoc osobom znajdującym się w trudnej
-                      sytuacji życiowej.
-                    </p>
-                    <hr align="left" />
-                  </div>
-                  <div className="informacje1_kontenerek">
-                    <p className="nazwa_org">Fundacja "Dla dzieci"</p>
-                    <p className="cel_org">
-                      Cel i misja: Pomoc dzieciom z ubogich rodzin.
-                    </p>
-                    <hr align="left" />
-                  </div>
-                  <div className="informacje1_kontenerek">
-                    <p className="nazwa_org">Fundacja "Bez domu"</p>
-                    <p className="cel_org">
-                      Cel i misja: Pomoc dla osób nie posiadających miejsca
-                      zamieszkania.
-                    </p>
-                    <hr align="left" />
-                  </div>
-                </div>
-                <div className="informacje2">
-                  <div className="informacje2_kontenerek">
-                    <p className="informacje2_artykuly">
-                      ubrania, jedzenie, sprzęt AGD, meble, zabawki
-                    </p>
-                    <hr />
-                  </div>
-                  <div className="informacje2_kontenerek">
-                    <p className="informacje2_artykuly">
-                      ubrania, meble, zabawki
-                    </p>
-                    <hr />
-                  </div>
-                  <div className="informacje2_kontenerek">
-                    <p className="informacje2_artykuly">
-                      ubrania, jedzenie, ciepłe koce
-                    </p>
-                    <hr />
-                  </div>
-                </div>
-              </div>
+              <p className="organisations__names--title">Organizacja 2</p>
+              <p className="organisations__names--purpose">
+                Cel i misja: Pomoc dzieciom z ubogich rodzin.
+              </p>
+              <hr align="left" />
+
+              <p className="organisations__names--title">Organizacja 3</p>
+              <p className="organisations__names--purpose">
+                Cel i misja: Pomoc dla osób nie posiadających miejsca
+                zamieszkania.
+              </p>
+              <hr align="left" />
             </div>
+            <div className="organisations__articles">
+              <p>lorem, lorem, lorem</p>
+              <hr />
 
-            <div id="pozarzadowe" className="hidden">
-              <div className="organisations__information-container">
-                <div className="informacje1">
-                  <div className="informacje1_kontenerek">
-                    <p className="nazwa_org">Organizacja 1</p>
-                    <p className="cel_org">
-                      Cel i misja: Pomoc osobom znajdującym się w trudnej
-                      sytuacji życiowej.
-                    </p>
-                    <hr align="left" />
-                  </div>
-                  <div className="informacje1_kontenerek">
-                    <p className="nazwa_org">Organizacja 2</p>
-                    <p className="cel_org">
-                      Cel i misja: Pomoc dzieciom z ubogich rodzin.
-                    </p>
-                    <hr align="left" />
-                  </div>
-                  <div className="informacje1_kontenerek">
-                    <p className="nazwa_org">Organizacja 3</p>
-                    <p className="cel_org">
-                      Cel i misja: Pomoc dla osób nie posiadających miejsca
-                      zamieszkania.
-                    </p>
-                    <hr align="left" />
-                  </div>
-                </div>
-                <div className="informacje2">
-                  <div className="informacje2_kontenerek">
-                    <p className="informacje2_artykuly">lorem, lorem, lorem</p>
-                    <hr />
-                  </div>
-                  <div className="informacje2_kontenerek">
-                    <p className="informacje2_artykuly">
-                      lorem, lorem, lorem, lorem
-                    </p>
-                    <hr />
-                  </div>
-                  <div className="informacje2_kontenerek">
-                    <p className="informacje2_artykuly">lorem, lorem</p>
-                    <hr />
-                  </div>
-                </div>
-              </div>
+              <p>lorem, lorem, lorem, lorem</p>
+              <hr />
+
+              <p>lorem, lorem</p>
+              <hr />
             </div>
-
-            <div id="lokalne" className="hidden">
-              <div className="organisations__information-container">
-                <div className="informacje1">
-                  <div className="informacje1_kontenerek">
-                    <p className="nazwa_org">Lokalna zbiórka 1</p>
-                    <p className="cel_org">
-                      Cel i misja: Pomoc osobom znajdującym się w trudnej
-                      sytuacji życiowej.
-                    </p>
-                    <hr align="left" />
-                  </div>
-                  <div className="informacje1_kontenerek">
-                    <p className="nazwa_org">Lokalna zbiórka 2</p>
-                    <p className="cel_org">
-                      Cel i misja: Pomoc dzieciom z ubogich rodzin.
-                    </p>
-                    <hr align="left" />
-                  </div>
-                  <div className="informacje1_kontenerek">
-                    <p className="nazwa_org">Lokalna zbiórka 3</p>
-                    <p className="cel_org">
-                      Cel i misja: Pomoc dla osób nie posiadających miejsca
-                      zamieszkania.
-                    </p>
-                    <hr align="left" />
-                  </div>
-                </div>
-                <div className="informacje2">
-                  <div className="informacje2_kontenerek">
-                    <p className="informacje2_artykuly">
-                      lorem, lorem, lorem, lorem
-                    </p>
-                    <hr />
-                  </div>
-                  <div className="informacje2_kontenerek">
-                    <p className="informacje2_artykuly">lorem, lorem</p>
-                    <hr />
-                  </div>
-                  <div className="informacje2_kontenerek">
-                    <p className="informacje2_artykuly">lorem, lorem</p>
-                    <hr />
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
+        </div>
+
+        <div id="lokalne" className="hidden">
+          <div className="organisations__information-container">
+            <div className="organisations__names">
+              <p className="organisations__names--title">Lokalna zbiórka 1</p>
+              <p className="organisations__names--purpose">
+                Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji
+                życiowej.
+              </p>
+              <hr align="left" />
+
+              <p className="organisations__names--title">Lokalna zbiórka 2</p>
+              <p className="organisations__names--purpose">
+                Cel i misja: Pomoc dzieciom z ubogich rodzin.
+              </p>
+              <hr align="left" />
+
+              <p className="organisations__names--title">Lokalna zbiórka 3</p>
+              <p className="organisations__names--purpose">
+                Cel i misja: Pomoc dla osób nie posiadających miejsca
+                zamieszkania.
+              </p>
+              <hr align="left" />
+            </div>
+            <div className="organisations__articles">
+              <p>lorem, lorem, lorem, lorem</p>
+              <hr />
+
+              <p>lorem, lorem</p>
+              <hr />
+
+              <p>lorem, lorem</p>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
