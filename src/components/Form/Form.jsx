@@ -150,7 +150,6 @@ class Form extends React.Component {
     return (
       <div className="form-content-container">
         <form>
-            
           {/* 1/6 */}
 
           <div className={`form-part-one ${hideFormOne ? "hide-element" : ""}`}>
@@ -301,7 +300,10 @@ class Form extends React.Component {
                 <option value="Helsinki">Helsinki</option>
               </select>
 
-              <div className="form-part-3a__title--smaller">
+              <div
+                className="form-part-3a__title--smaller"
+                style={{ display: "none" }}
+              >
                 Komu chcesz pomóc?
               </div>
 
@@ -397,8 +399,10 @@ class Form extends React.Component {
                   <span className="__input" />
                 </label>
                 <div style={{ marginLeft: "3em" }}>
-                  <p className="nazwa_org">Fundacja "Dbam o Zdrowie"</p>
-                  <p className="cel_org">
+                  <p className="information-container__name">
+                    Fundacja "Dbam o Zdrowie"
+                  </p>
+                  <p className="information-container__purpose">
                     Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji
                     życiowej.
                   </p>
@@ -419,8 +423,10 @@ class Form extends React.Component {
                   <span className="__input" />
                 </label>
                 <div style={{ marginLeft: "3em" }}>
-                  <p className="nazwa_org">Fundacja "Dla dzieci"</p>
-                  <p className="cel_org">
+                  <p className="information-container__name">
+                    Fundacja "Dla dzieci"
+                  </p>
+                  <p className="information-container__purpose">
                     Cel i misja: Pomoc dzieciom z ubogich rodzin.
                   </p>
                 </div>
